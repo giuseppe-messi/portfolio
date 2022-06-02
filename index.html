@@ -1,276 +1,525 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
-    <meta name="description" content="Joe Messina, Front-end and Full-stack Web Developer">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta
+      name="viewport"
+      content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+    />
+    <meta
+      name="description"
+      content="Giuseppe Messina, Front-end and Full-stack Web Developer"
+    />
 
-    <title>Joe Messina, Front-end and Full-stack Web Developer</title>
-    <link rel="stylesheet" href="style.css" type="text/css" media="screen">
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
-</head>
+    <title>Giuseppe Messina, Front-end and Full-stack Web Developer</title>
+    <link rel="stylesheet" href="style.css" type="text/css" media="screen" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Caveat:wght@400;500;600;700&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
 
-<body id='body'>
+  <body id="body">
     <div class="total-overlay-work">
-        <div class="inner">
-            <div class="close"><span><div class="overlay-close-prj"></div><span></span><span></span></span></div>
-            <div class="text">
-                <h3 class="title"></h3>
-                <p class="desc"></p>
-                <div class="tech-checkout-box">
-                    <div>
-                        <h4>Technologies used:</h4>
-                        <div class="tech"></div>
-                    </div>
-                    <div>
-                        <h4>Check it out</h4>
-                        <div class="ctas">
-                            <a href="#"><button> Live Demo</button></a>
-                            <a href="#"><button>GitHub Repo</button></a>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div class="screenshots-box">
-                   <!-- screenshot images here -->
-            </div>
+      <div class="inner">
+        <div class="close">
+          <span
+            ><div class="overlay-close-prj"></div>
+            <span></span><span></span
+          ></span>
         </div>
-    </div>   
-     
-    <div class="main-box-outer">
-        <div class="main-box-inner">
-            <div class='menu'>
-                <div class="contain">
-                     <div class="initials"><strong onclick="inlineCloseMenuForInitials()">-jM<span>.</span></strong></div>
-                     <div class="links-box">
-                         <div><a onclick="smoothScrollDelayed('about')" href="#about"><span class="span-menu-link"><div class="hover-colour about"></div>About</span></a></div>
-                         <div><a onclick="smoothScrollDelayed('as-worker')" href="#as-worker"><span class="span-menu-link"><div class="hover-colour worker"></div>As a worker</span></a></div>
-                         <div><a onclick="smoothScrollDelayed('as-student')" href="#as-student"><span class="span-menu-link"><div class="hover-colour student"></div>As a student</span></a></div>
-                         <div><a onclick="smoothScrollDelayed('say-hi')" href="#say-hi"><span class="span-menu-link"><div class="hover-colour sayhi"></div>Say hi</span></a></div>
-                     </div>
-         
-                     <div class="contact-icon-box">
-                         <div class="contact-details">
-                             <strong><a href="mailto:joe91messina@gmail.com"><p class="email">joe91messina@gmail.com</p></a></strong>
-                             <strong><p>+44(0)7 58 64 74 058</p></strong>
-                             <p>123 North Road, N45HDS, London</p>
-                         </div>
-                         <div class="menu-icon icon"><img src="media/08.png" alt="bulb light icon for menu nav"></div>
-                     </div>
-                </div>
-                <!-- contain for smaller screens -->
-                <div class="contain-other">
-                     <div class="initials"><strong onclick="inlineCloseMenuForInitials()">-jM<span>.</span></strong></div>
-                     <div class="contain-contain">
-                         <div class="links-box">
-                             <div><a onclick="smoothScrollDelayed('about')" href="#about"><span class="span-menu-link"><div class="hover-colour about"></div>About</span></a></div>
-                             <div><a onclick="smoothScrollDelayed('as-worker')" href="#as-worker"><span class="span-menu-link"><div class="hover-colour worker"></div>As a worker</span></a></div>
-                             <div><a onclick="smoothScrollDelayed('as-student')" href="#as-student"><span class="span-menu-link"><div class="hover-colour student"></div>As a student</span></a></div>
-                             <div><a onclick="smoothScrollDelayed('say-hi')" href="#say-hi"><span class="span-menu-link"><div class="hover-colour sayhi"></div>Say hi</span></a></div>
-                         </div>
-                         <div class="contact-icon-box">
-                             <div class="contact-details">
-                                 <strong><a href="mailto:joe91messina@gmail.com"><p>joe91messina@gmail.com</p></a></strong>
-                                 <strong><p>+44(0)7 58 64 74 058</p></strong>
-                                 <p>123 North Road, N45HDS, London</p>
-                             </div>
-                         </div>
-                     </div>
-                 </div>
-             </div>
-     
-             <div class="content-box">
-                 <div class="overlay-srink"></div>
-     
-                 <div class="hamburger desktop">
-                     <div class="click-overlay-hamb"></div>
-                     <span></span>
-                     <span></span>
-                     <span></span>
-                 </div>
-     
-                 <header> 
-                     <div class="initials"><strong>-jM<span>.</span></strong></div>
-                     <div class="left"></div>
-                     <div class="right"></div>
-                 </header>
-     
-                 <section class="about" id="about">
-                         <div class="left">
-                             <p>My name is Joe and I am JavaScript Developer. I began my journey 
-                                 into Web Development some years ago now when I bought my first book 
-                                 about Javascript, I was hooked in just a few weeks. I love JavaScript 
-                                 and everything that comes with it, from the client-side to the server-side, 
-                                 my appreciation for this wonderful programming language keeps growing day 
-                                 by day. I also have a good eye for beautiful and clean layout and have a 
-                                 diverse set of skills ranging from design to development.</p>
-                         </div>
-     
-                         <div class="right">
-                             <img src="media/joe.png" alt="joe messina's photo">
-                         </div>             
-                 </section>
-     
-                 <section class="as-worker" id="as-worker">
-                     <div class="heading">
-                         <h2>As a Worker</h2>
-                     </div>
-     
-                     <div class="main-box">
-                         <div class="cro">
-                             <div class="cro-inner">
-                                 <div>
-                                     <h3>My time at WeTeachCRO</h3>
-                                     <p class="para">
-                                         WeTeachCRO is a Conversion Rate Optimisation (CRO) agency. 
-                                         CRO is the practice of raising your conversion rate by compelling 
-                                         visitors to your site to take specific actions like buying a product, 
-                                         downloading a PDF, or subscribing to a newsletter. Its broader purpose 
-                                         is to optimize your entire marketing process—to make everything work smoothly. <br> <br>
-                                         
-                                         Key technologies used during my time at WeTeachCRO include 
-                                         HTML, CSS, Javascript, jQuery, and some Firebase. Given the 
-                                         nature of the industry, every project has a life span of a few 
-                                         months, during which the analytics is done, after that, the client 
-                                         might or might not implement the changes themself. <br> <br>
-     
-                                         Below some examples of the many projects I worked on.
-                                     </p>
-                                 </div>
-                                 <div class="projects">
-                                     <div class="img-box"><div class="proj-hoverlay cms"></div><div class="hover-overlay"><p>Check it out</p></div><img src="media/cms1.png" alt="companies made simple page screenshot"></div>
-                                     <div class="img-box"><div class="proj-hoverlay tso"></div><div class="hover-overlay"><p>Check it out</p></div><img src="media/tso1.jpg" alt="tso page screenshot"></div>                             
-                                     <div class="img-box"><div class="proj-hoverlay heart"></div><div class="hover-overlay"><p>Check it out</p></div><img src="media/heart1.png" alt="heartinternet page screenshot"></div>   
-                                 </div>
-                             </div>
-     
-                         </div>
-         
-                         <div class="luxus">
-                             <div>
-                                 <h3>Working for Luxus Worldwide</h3>
-                                 <p class="para">
-                                     I have two years of experience working at a digital marketing company called Luxus. 
-                                     My key responsibilities were to create web pages using HTML, CSS, Javascript, and Adobe's 
-                                     content management system. One of the latest projects I worked on was the development of 
-                                     the new site for the travel technology company Amadeus.<br> <br>
-                                     The following are two examples of the many pages I helped to create using Adobe Experience Manager.
-                                 </p>
-                               
-                             </div>
-     
-                             <div class="projects">
-                                    <div class="img-box"><a class="hover-overlay" href="https://amadeus.com/en/portfolio/airlines/farexpert-filing-platform" target="_blank"><p>View page</p></a><img src="media/amadeus.png" alt="amadeus page screenshot"></div>
-                                    <div class="img-box"><a class="hover-overlay" href="https://amadeus.com/en/insights/blog/customers-living-growing-live-travel-space" target="_blank"><p>View page</p></a><img src="media/amadeus2.png" alt="amadeus page screenshot"></div>
-                             </div>
-                         </div>
-     
-                     </div>
-                 </section>
-     
-                 <section class="as-student" id="as-student">
-                     <div class="heading">
-                         <div class="head-texts">
-                             <h2>As a Student</h2>
-                             <p>I studied the Full Stack JavaScript Techdegree program with Treehouse 
-                                 and these are some of the projects I created during the course.</p>
-                         </div>
-                     </div>
-     
-                     <div class="gallery">
-                         <div class="img-box"><div class="proj-hoverlay libraryManager"></div><div class="hover-overlay"><p>SQL Library Manager</p></div><img src="media/sql-library-manager_main.png" alt="sql-library-manager project screenshot"></div>
-                         <div class="img-box"><div class="proj-hoverlay listPagination"></div><div class="hover-overlay"><p>List pagination</p></div><img src="media/list_pagination_and_filtering_main.png" alt="list_pagination_and_filtering project screenshot"></div>
-                         <div class="img-box"><div class="proj-hoverlay apiRequest"></div><div class="hover-overlay"><p>API Request</p></div><img src="media/public_api_request_main.png" alt="public_api_request project screenshot"></div>
-                         <div class="img-box"><div class="proj-hoverlay oopGame"></div><div class="hover-overlay"><p>OOP Game</p></div><img src="media/oop_game_main.png" alt="oop_game project screenshot"></div>
-                         <div class="img-box"><div class="proj-hoverlay reactApp"></div><div class="hover-overlay"><p>Gallery App</p></div><img src="media/react-gallery-app_main.png" alt="react-gallery-app project screenshot"></div>
-                         <div class="img-box"><div class="proj-hoverlay interactiveForm"></div><div class="hover-overlay"><p>Interactive Form</p></div><img src="media/interactive_form_main.png" alt="interactive_form project screenshot"></div>
-                         <div class="img-box"><div class="proj-hoverlay reactRestApiApp"></div><div class="hover-overlay"><p>React & REST API App</p></div><img src="media/app-with-react-and-rest-api_main.png" alt="app-with-react-and-rest-api project screenshot"></div>
-                     </div>
-     
-                 </section>
-
-                 <section class="quote">
-                    <div class="heading">
-                        <p><i><img class="quote-mark left" src="media/quote-mark-left.png" alt="quote mark icon"><img class="quote-mark right" src="media/quote-mark-right.png" alt="quote mark icon"> One thing I love about this industry is the sense of community. Developers
-                               around the world helping each other, online learning resources given for free, 
-                               all the great platforms and forums which purpose is to share knowledge. It's thanks 
-                               to this community that I am now a developer.</i></p>
-                    </div>
-                </section>
-     
-                 <section class="skills">
-                     <div class="heading">
-                         <h2>Some of the things<br> I know.</h2>
-                     </div>
-                     <div id="skills-icons-box">
-                         <div><div class="skill-shadow"></div><img src="media/js.png" alt="icon Javascript"></div>
-                         <div><div class="skill-shadow"></div><img src="media/react.png" alt="icon react"></div>
-                         <div><div class="skill-shadow"></div><img src="media/node.png" alt="icon node"></div>
-                         <div><div class="skill-shadow"></div><img src="media/express.png" alt="icon express"></div>
-                         <div><div class="skill-shadow"></div><img src="media/jquery.png" alt="icon jquery"></div>
-                         <div><div class="skill-shadow"></div><img src="media/api.png" alt="icon api"></div>
-                         <div><div class="skill-shadow"></div><img src="media/sql.png" alt="icon sql"></div>
-                         <div><div class="skill-shadow"></div><img src="media/html.png" alt="icon html"></div>
-                         <div><div class="skill-shadow"></div><img src="media/css.png" alt="icon css"></div>
-                     </div>
-                 </section>
-
-     
-                 <section class="up-to">
-                     <div class="heading">
-                         <h2>What am I <br>up to these days?</h2>
-                     </div>
-                     
-                     <div class="boxes">
-                         <div class="left">
-                             <div class="up-to-icon icon"><span class="icon-svg-span"></span></div>
-                         </div>
-     
-                         <div class="right">
-                               <div>
-                                   <p>I never stop learning or improving myself and I always like to have something to do, right now 
-                                      I'm working on a browser extension that allows users to write, edit and delete comments on a 
-                                      specific page in real-time. For this project, I'm using Firebase as a database.</p>
-
-                                    <p>I'm also diving deeper into the "Algorithm and Data Structure" realm, following some online courses online.</p>
-
-                                    <p>And this is not programming-related, but I always try to keep my artistic self alive by doing 
-                                       something creative, these days, it's mainly by playing guitar.</p>
-                               </div>   
-                         </div>    
-                     </div>
-                 </section>
-     
-                 <section class="say-hi" id="say-hi">
-                     <div class="heading">
-                         <h2>Say hi</h2>
-                     </div>
-                     <div>
-                         <div class="contact-details">
-                             <strong><a href="mailto:joe91messina@gmail.com"><p>joe91messina@gmail.com</p></a></strong>
-                             <strong><p>+44(0)7 58 64 74 058</p></strong>
-                             <p>123 North Road, N45HDS, London</p>
-                         </div>
-                     </div>
-                 </section>
-     
-             </div>
-
+        <div class="text">
+          <h3 class="title"></h3>
+          <p class="desc"></p>
+          <div class="tech-checkout-box">
+            <div>
+              <h4>Technologies used:</h4>
+              <div class="tech"></div>
+            </div>
+            <div>
+              <h4>Check it out</h4>
+              <div class="ctas">
+                <a href="#"><button>Live Demo</button></a>
+                <a href="#"><button>GitHub Repo</button></a>
+              </div>
+            </div>
+          </div>
         </div>
-
+        <div class="screenshots-box">
+          <!-- screenshot images here -->
+        </div>
+      </div>
     </div>
 
-    <div class="border top">
-        <div class="hamburger mobile">
+    <div class="main-box-outer">
+      <div class="main-box-inner">
+        <div class="menu">
+          <div class="contain">
+            <div class="initials">
+              <strong onclick="inlineCloseMenuForInitials()"
+                >-GM<span>.</span></strong
+              >
+            </div>
+            <div class="links-box">
+              <div>
+                <a onclick="smoothScrollDelayed('about')" href="#about"
+                  ><span class="span-menu-link"
+                    ><div class="hover-colour about"></div>
+                    About</span
+                  ></a
+                >
+              </div>
+              <div>
+                <a onclick="smoothScrollDelayed('as-worker')" href="#as-worker"
+                  ><span class="span-menu-link"
+                    ><div class="hover-colour worker"></div>
+                    As a worker</span
+                  ></a
+                >
+              </div>
+              <div>
+                <a
+                  onclick="smoothScrollDelayed('as-student')"
+                  href="#as-student"
+                  ><span class="span-menu-link"
+                    ><div class="hover-colour student"></div>
+                    As a student</span
+                  ></a
+                >
+              </div>
+              <div>
+                <a onclick="smoothScrollDelayed('say-hi')" href="#say-hi"
+                  ><span class="span-menu-link"
+                    ><div class="hover-colour sayhi"></div>
+                    Say hi</span
+                  ></a
+                >
+              </div>
+            </div>
+
+            <div class="contact-icon-box">
+              <div class="contact-details">
+                <strong
+                  ><a href="mailto:giuseppe91messina@gmail.com"
+                    ><p class="email">giuseppe91messina@gmail.com</p></a
+                  ></strong
+                >
+                <strong><p>+44(0)7 58 64 74 058</p></strong>
+                <p>123 North Road, N45HDS, London</p>
+              </div>
+              <div class="menu-icon icon">
+                <img src="media/08.png" alt="bulb light icon for menu nav" />
+              </div>
+            </div>
+          </div>
+          <!-- contain for smaller screens -->
+          <div class="contain-other">
+            <div class="initials">
+              <strong onclick="inlineCloseMenuForInitials()"
+                >-GM<span>.</span></strong
+              >
+            </div>
+            <div class="contain-contain">
+              <div class="links-box">
+                <div>
+                  <a onclick="smoothScrollDelayed('about')" href="#about"
+                    ><span class="span-menu-link"
+                      ><div class="hover-colour about"></div>
+                      About</span
+                    ></a
+                  >
+                </div>
+                <div>
+                  <a
+                    onclick="smoothScrollDelayed('as-worker')"
+                    href="#as-worker"
+                    ><span class="span-menu-link"
+                      ><div class="hover-colour worker"></div>
+                      As a worker</span
+                    ></a
+                  >
+                </div>
+                <div>
+                  <a
+                    onclick="smoothScrollDelayed('as-student')"
+                    href="#as-student"
+                    ><span class="span-menu-link"
+                      ><div class="hover-colour student"></div>
+                      As a student</span
+                    ></a
+                  >
+                </div>
+                <div>
+                  <a onclick="smoothScrollDelayed('say-hi')" href="#say-hi"
+                    ><span class="span-menu-link"
+                      ><div class="hover-colour sayhi"></div>
+                      Say hi</span
+                    ></a
+                  >
+                </div>
+              </div>
+              <div class="contact-icon-box">
+                <div class="contact-details">
+                  <strong
+                    ><a href="mailto:giuseppe91messina@gmail.com"
+                      ><p>giuseppe91messina@gmail.com</p></a
+                    ></strong
+                  >
+                  <strong><p>+44(0)7 58 64 74 058</p></strong>
+                  <p>123 North Road, N45HDS, London</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="content-box">
+          <div class="overlay-srink"></div>
+
+          <div class="hamburger desktop">
             <div class="click-overlay-hamb"></div>
             <span></span>
             <span></span>
             <span></span>
+          </div>
+
+          <header>
+            <div class="initials">
+              <strong>-GM<span>.</span></strong>
+            </div>
+            <div class="left"></div>
+            <div class="right"></div>
+          </header>
+
+          <section class="about" id="about">
+            <div class="left">
+              <p>
+                My name is Giuseppe and I am JavaScript Developer. I began my
+                journey into Web Development some years ago now when I bought my
+                first book about Javascript, I was hooked in just a few weeks. I
+                love JavaScript and everything that comes with it, from the
+                client-side to the server-side, my appreciation for this
+                wonderful programming language keeps growing day by day. I also
+                have a good eye for beautiful and clean layout and have a
+                diverse set of skills ranging from design to development.
+              </p>
+            </div>
+
+            <div class="right">
+              <img src="media/joe.png" alt="giuseppe messina's photo" />
+            </div>
+          </section>
+
+          <section class="as-worker" id="as-worker">
+            <div class="heading">
+              <h2>As a Worker</h2>
+            </div>
+
+            <div class="main-box">
+              <div class="cro">
+                <div class="cro-inner">
+                  <div>
+                    <h3>My time at WeTeachCRO</h3>
+                    <p class="para">
+                      WeTeachCRO is a Conversion Rate Optimisation (CRO) agency.
+                      CRO is the practice of raising your conversion rate by
+                      compelling visitors to your site to take specific actions
+                      like buying a product, downloading a PDF, or subscribing
+                      to a newsletter. Its broader purpose is to optimize your
+                      entire marketing process—to make everything work smoothly.
+                      <br />
+                      <br />
+
+                      Key technologies used during my time at WeTeachCRO include
+                      HTML, CSS, Javascript, jQuery, and some Firebase. Given
+                      the nature of the industry, every project has a life span
+                      of a few months, during which the analytics is done, after
+                      that, the client might or might not implement the changes
+                      themself. <br />
+                      <br />
+
+                      Below some examples of the many projects I worked on.
+                    </p>
+                  </div>
+                  <div class="projects">
+                    <div class="img-box">
+                      <div class="proj-hoverlay cms"></div>
+                      <div class="hover-overlay"><p>Check it out</p></div>
+                      <img
+                        src="media/cms1.png"
+                        alt="companies made simple page screenshot"
+                      />
+                    </div>
+                    <div class="img-box">
+                      <div class="proj-hoverlay tso"></div>
+                      <div class="hover-overlay"><p>Check it out</p></div>
+                      <img src="media/tso1.jpg" alt="tso page screenshot" />
+                    </div>
+                    <div class="img-box">
+                      <div class="proj-hoverlay heart"></div>
+                      <div class="hover-overlay"><p>Check it out</p></div>
+                      <img
+                        src="media/heart1.png"
+                        alt="heartinternet page screenshot"
+                      />
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <div class="luxus">
+                <div>
+                  <h3>Working for Luxus Worldwide</h3>
+                  <p class="para">
+                    I have two years of experience working at a digital
+                    marketing company called Luxus. My key responsibilities were
+                    to create web pages using HTML, CSS, Javascript, and Adobe's
+                    content management system. One of the latest projects I
+                    worked on was the development of the new site for the travel
+                    technology company Amadeus.<br />
+                    <br />
+                    The following are two examples of the many pages I helped to
+                    create using Adobe Experience Manager.
+                  </p>
+                </div>
+
+                <div class="projects">
+                  <div class="img-box">
+                    <a
+                      class="hover-overlay"
+                      href="https://amadeus.com/en/portfolio/airlines/farexpert-filing-platform"
+                      target="_blank"
+                      ><p>View page</p></a
+                    ><img
+                      src="media/amadeus.png"
+                      alt="amadeus page screenshot"
+                    />
+                  </div>
+                  <div class="img-box">
+                    <a
+                      class="hover-overlay"
+                      href="https://amadeus.com/en/insights/blog/customers-living-growing-live-travel-space"
+                      target="_blank"
+                      ><p>View page</p></a
+                    ><img
+                      src="media/amadeus2.png"
+                      alt="amadeus page screenshot"
+                    />
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="as-student" id="as-student">
+            <div class="heading">
+              <div class="head-texts">
+                <h2>As a Student</h2>
+                <p>
+                  I studied the Full Stack JavaScript Techdegree program with
+                  Treehouse and these are some of the projects I created during
+                  the course.
+                </p>
+              </div>
+            </div>
+
+            <div class="gallery">
+              <div class="img-box">
+                <div class="proj-hoverlay libraryManager"></div>
+                <div class="hover-overlay"><p>SQL Library Manager</p></div>
+                <img
+                  src="media/sql-library-manager_main.png"
+                  alt="sql-library-manager project screenshot"
+                />
+              </div>
+              <div class="img-box">
+                <div class="proj-hoverlay listPagination"></div>
+                <div class="hover-overlay"><p>List pagination</p></div>
+                <img
+                  src="media/list_pagination_and_filtering_main.png"
+                  alt="list_pagination_and_filtering project screenshot"
+                />
+              </div>
+              <div class="img-box">
+                <div class="proj-hoverlay apiRequest"></div>
+                <div class="hover-overlay"><p>API Request</p></div>
+                <img
+                  src="media/public_api_request_main.png"
+                  alt="public_api_request project screenshot"
+                />
+              </div>
+              <div class="img-box">
+                <div class="proj-hoverlay oopGame"></div>
+                <div class="hover-overlay"><p>OOP Game</p></div>
+                <img
+                  src="media/oop_game_main.png"
+                  alt="oop_game project screenshot"
+                />
+              </div>
+              <div class="img-box">
+                <div class="proj-hoverlay reactApp"></div>
+                <div class="hover-overlay"><p>Gallery App</p></div>
+                <img
+                  src="media/react-gallery-app_main.png"
+                  alt="react-gallery-app project screenshot"
+                />
+              </div>
+              <div class="img-box">
+                <div class="proj-hoverlay interactiveForm"></div>
+                <div class="hover-overlay"><p>Interactive Form</p></div>
+                <img
+                  src="media/interactive_form_main.png"
+                  alt="interactive_form project screenshot"
+                />
+              </div>
+              <div class="img-box">
+                <div class="proj-hoverlay reactRestApiApp"></div>
+                <div class="hover-overlay"><p>React & REST API App</p></div>
+                <img
+                  src="media/app-with-react-and-rest-api_main.png"
+                  alt="app-with-react-and-rest-api project screenshot"
+                />
+              </div>
+            </div>
+          </section>
+
+          <section class="quote">
+            <div class="heading">
+              <p>
+                <i
+                  ><img
+                    class="quote-mark left"
+                    src="media/quote-mark-left.png"
+                    alt="quote mark icon"
+                  /><img
+                    class="quote-mark right"
+                    src="media/quote-mark-right.png"
+                    alt="quote mark icon"
+                  />
+                  One thing I love about this industry is the sense of
+                  community. Developers around the world helping each other,
+                  online learning resources given for free, all the great
+                  platforms and forums which purpose is to share knowledge. It's
+                  thanks to this community that I am now a developer.</i
+                >
+              </p>
+            </div>
+          </section>
+
+          <section class="skills">
+            <div class="heading">
+              <h2>
+                Some of the things<br />
+                I know.
+              </h2>
+            </div>
+            <div id="skills-icons-box">
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/js.png" alt="icon Javascript" />
+              </div>
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/react.png" alt="icon react" />
+              </div>
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/node.png" alt="icon node" />
+              </div>
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/express.png" alt="icon express" />
+              </div>
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/jquery.png" alt="icon jquery" />
+              </div>
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/api.png" alt="icon api" />
+              </div>
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/sql.png" alt="icon sql" />
+              </div>
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/html.png" alt="icon html" />
+              </div>
+              <div>
+                <div class="skill-shadow"></div>
+                <img src="media/css.png" alt="icon css" />
+              </div>
+            </div>
+          </section>
+
+          <section class="up-to">
+            <div class="heading">
+              <h2>What am I <br />up to these days?</h2>
+            </div>
+
+            <div class="boxes">
+              <div class="left">
+                <div class="up-to-icon icon">
+                  <span class="icon-svg-span"></span>
+                </div>
+              </div>
+
+              <div class="right">
+                <div>
+                  <p>
+                    I never stop learning or improving myself and I always like
+                    to have something to do, right now I'm working on a browser
+                    extension that allows users to write, edit and delete
+                    comments on a specific page in real-time. For this project,
+                    I'm using Firebase as a database.
+                  </p>
+
+                  <p>
+                    I'm also diving deeper into the "Algorithm and Data
+                    Structure" realm, following some online courses online.
+                  </p>
+
+                  <p>
+                    And this is not programming-related, but I always try to
+                    keep my artistic self alive by doing something creative,
+                    these days, it's mainly by playing guitar.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </section>
+
+          <section class="say-hi" id="say-hi">
+            <div class="heading">
+              <h2>Say hi</h2>
+            </div>
+            <div>
+              <div class="contact-details">
+                <strong
+                  ><a href="mailto:giuseppe91messina@gmail.com"
+                    ><p>giuseppe91messina@gmail.com</p></a
+                  ></strong
+                >
+                <strong><p>+44(0)7 58 64 74 058</p></strong>
+                <p>3 Seaford road, N155DU, London</p>
+              </div>
+            </div>
+          </section>
         </div>
-        <h1>Full Stack Javascript Developer</h1>
+      </div>
+    </div>
+
+    <div class="border top">
+      <div class="hamburger mobile">
+        <div class="click-overlay-hamb"></div>
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <h1>Full Stack Javascript Developer</h1>
     </div>
     <div class="border right"></div>
     <div class="border bottom"></div>
@@ -278,6 +527,6 @@
 
     <div class="images-loader"></div>
 
-<script src="script.js"></script>
-</body>
+    <script src="script.js"></script>
+  </body>
 </html>
