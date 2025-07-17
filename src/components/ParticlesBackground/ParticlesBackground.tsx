@@ -10,6 +10,7 @@ import {
 // import { loadFull } from "tsparticles"; // if you are going to use `loadFull`, install the "tsparticles" package too.
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
+import styles from "./ParticlesBackground.module.css";
 
 export const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
@@ -40,6 +41,8 @@ export const ParticlesBackground = () => {
           value: "#ffffff"
         }
       },
+      fullScreen: { enable: true },
+      smooth: true,
       fpsLimit: 120,
       particles: {
         color: {
@@ -70,7 +73,7 @@ export const ParticlesBackground = () => {
             enable: true,
             area: 800
           },
-          value: 80
+          value: 160
         },
         opacity: {
           value: 0.5
@@ -93,6 +96,7 @@ export const ParticlesBackground = () => {
         id="tsparticles"
         particlesLoaded={particlesLoaded}
         options={options}
+        className={styles.particles}
       />
     );
   }

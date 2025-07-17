@@ -1,0 +1,56 @@
+@keyframes move {
+  0% {
+    transform: translateY(0px);
+  }
+  10% {
+    transform: translateY(-20px) scale(1.4, 0.6);
+  }
+  15% {
+    transform: translateY(-27px) scale(1.44, 0.6);
+  }
+  25% {
+    transform: translateY(0px) scale(0.9, 1.1);
+  }
+  45% {
+    transform: translateY(20px) scale(1, 1);
+  }
+  50% {
+    transform: translateY(30px) scale(1.2, 0.8);
+  }
+  55% {
+    transform: translateY(30px) scale(1.1, 0.9);
+  }
+  65% {
+    transform: translateY(10px) scale(0.9, 1.1);
+  }
+  100% {
+    transform: translateY(0px);
+  }
+}
+
+.wrapper {
+  font-size: 3em;
+  display: flex;
+}
+
+.letterBox {
+  animation-name: move;
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-delay: var(--delay);
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+
+.letter {
+  display: inline-block;
+  cursor: default;
+}
+
+.letter.animate {
+  animation-name: move;
+  animation-duration: 2s;
+  animation-timing-function: ease-out;
+  animation-delay: 500ms;
+  animation-iteration-count: 1;
+}
