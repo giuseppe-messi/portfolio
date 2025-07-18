@@ -1,3 +1,4 @@
+import { useCursorMagnify } from "../../stores/useCursorMagnify";
 import styles from "./Nav.module.css";
 
 import { memo } from "react";
@@ -8,6 +9,8 @@ import { memo } from "react";
 //   hasPassedHeader: boolean | null;
 // }
 
+const NAV_ITEMS = ["About", "Works", "Contact"];
+
 export const Nav = memo(() =>
   // { hasPassedHeader }: NavProps
   {
@@ -16,13 +19,20 @@ export const Nav = memo(() =>
     //   []
     // );
 
+    const { setMagnify } = useCursorMagnify();
+
     return (
       <nav className={styles.nav}>
         <div>GM</div>
         <ul>
-          <li>About</li>
-          <li>Works</li>
-          <li>Contact</li>
+          {NAV_ITEMS.map((i) => (
+            <li
+              onMouseEnter={() => setMagnify(true)}
+              onMouseLeave={() => setMagnify(false)}
+            >
+              {i}
+            </li>
+          ))}
         </ul>
       </nav>
     );

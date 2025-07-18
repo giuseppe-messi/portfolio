@@ -17,7 +17,8 @@ export const CustomCursor = () => {
 
       frame = requestAnimationFrame(() => {
         if (cursorRef.current) {
-          cursorRef.current.style.transform = `translate3d(${x}px, ${y}px, 0)`;
+          cursorRef.current.style.top = `${y}px`;
+          cursorRef.current.style.left = `${x}px`;
         }
       });
     };
