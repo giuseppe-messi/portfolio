@@ -1,9 +1,12 @@
-import styles from "./Works.module.css";
+import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
+// import styles from "./Works.module.css";
 
 export const Works = () => {
   return (
-    <section className={styles.works}>
-      {/* <h2>Works</h2> */}
+    <section className="section">
+      <h2>
+        <AnimatedText text="Works" />
+      </h2>
       <div>
         <p>You can find my works: Lorem Iprum</p>
       </div>

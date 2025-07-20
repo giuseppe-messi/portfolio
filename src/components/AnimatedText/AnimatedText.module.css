@@ -30,7 +30,7 @@
 
 .wrapper {
   font-size: 3em;
-  display: flex;
+  display: inline-flex;
 }
 
 .letterBox {

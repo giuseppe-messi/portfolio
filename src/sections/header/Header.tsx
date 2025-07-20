@@ -1,10 +1,11 @@
+import clsx from "clsx";
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 import styles from "./Header.module.css";
 
 import { memo } from "react";
 
 export const Header = memo(() => (
-  <header className={styles.header}>
+  <header className={clsx("section", styles.header)}>
     <div className={styles.headingWrap}>
       <h1>
         <AnimatedText text="Giuseppe" />

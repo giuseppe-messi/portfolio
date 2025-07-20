@@ -1,9 +1,11 @@
-import styles from "./About.module.css";
+import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 
 export const About = () => {
   return (
-    <section className={styles.about}>
-      {/* <h2>About</h2> */}
+    <section className="section">
+      <h2>
+        <AnimatedText text="About" />
+      </h2>
       <div>
         <p>
           I’m Giuseppe Messina, a Senior Front-End Engineer based in London,

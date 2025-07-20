@@ -10,12 +10,14 @@ import { SayHi } from "../../sections/SayHi/SayHi";
 import { Contact } from "../../sections/Contact/Contact";
 
 const Home: React.FC = () => (
-  <div className={styles.container}>
-    <Nav />
-    <CustomCursor />
-    <Header />
-    <About />
-    <Works />
+  <div>
+    <div className={styles.container}>
+      <Nav />
+      <CustomCursor />
+      <Header />
+      <About />
+      <Works />
+    </div>
     <SayHi />
     <Contact />
     <ParticlesBackground />
