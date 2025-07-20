@@ -4,13 +4,13 @@ import { ParticlesBackground } from "../../components/ParticlesBackground/Partic
 import { Header } from "../../sections/header/Header";
 import { CustomCursor } from "../../components/CustomCursor/CustomCursor";
 import { Nav } from "../../components/Nav/Nav";
-import { About } from "../../sections/About/About";
 import { Works } from "../../sections/Works/Works";
 import { SayHi } from "../../sections/SayHi/SayHi";
 import { Contact } from "../../sections/Contact/Contact";
+import { About } from "../../sections/about/About";
 
 const Home: React.FC = () => (
-  <div>
+  <>
     <div className={styles.container}>
       <Nav />
       <CustomCursor />
@@ -18,10 +18,14 @@ const Home: React.FC = () => (
       <About />
       <Works />
     </div>
-    <SayHi />
-    <Contact />
+
+    <div className={styles.parallax}>
+      <SayHi />
+      <Contact />
+    </div>
+
     <ParticlesBackground />
-  </div>
+  </>
 );
 
 export default Home;
