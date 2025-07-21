@@ -17,13 +17,18 @@ export const SayHi = () => (
           dy=".35em"
           fontSize="80"
           fontWeight="bold"
-          fill="black"
+          fill="var(--color-primary)"
         >
           Get in Touch
         </text>
       </mask>
     </defs>
-    <rect width="100%" height="100%" fill="black" mask="url(#cutout-text)" />
+    <rect
+      width="100%"
+      height="100%"
+      fill="var(--color-primary)"
+      mask="url(#cutout-text)"
+    />
   </svg>
   // </div>
 );

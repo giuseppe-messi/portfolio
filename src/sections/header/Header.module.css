@@ -52,7 +52,7 @@
 }
 
 .arrowBox {
-  background: black;
+  background: var(--color-primary);
   color: white;
   position: absolute;
   bottom: -3em;

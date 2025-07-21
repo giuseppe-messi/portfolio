@@ -1,6 +1,6 @@
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
-import styles from "./About.module.css";
+// import styles from "./About.module.css";
 
 export const About = () => {
   const { setMagnify } = useCursorMagnify();
@@ -13,13 +13,13 @@ export const About = () => {
         </h2>
         <div>
           <p>
-            I’m <strong className={styles.bigger}>Giuseppe Messina</strong>, a{" "}
-            <strong className={styles.big}>Senior Front-End Engineer</strong>{" "}
-            based in London, with over eight years of experience building
-            high-performance React applications for commercial clients. While
-            most of my professional projects are under NDAs and copyright
-            restrictions, I’ve put together a <strong>GitHub showcase</strong>{" "}
-            where I share my approach to modern front-end development.
+            I’m <strong>Giuseppe Messina</strong>, a{" "}
+            <strong>Senior Front-End Engineer</strong> based in London, with
+            over eight years of experience building high-performance React
+            applications for commercial clients. While most of my professional
+            projects are under NDAs and copyright restrictions, I’ve put
+            together a <strong>GitHub showcase</strong> where I share my
+            approach to modern front-end development.
           </p>
 
           <br />
@@ -59,7 +59,7 @@ export const About = () => {
               onMouseEnter={() => setMagnify(true)}
               onMouseLeave={() => setMagnify(false)}
             >
-              <strong className={styles.bigger}>my GitHub page</strong>
+              <strong>my GitHub page</strong>
             </a>
             . Feel free to get in touch using the form below.
           </p>

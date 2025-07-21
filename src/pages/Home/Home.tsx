@@ -3,14 +3,14 @@ import styles from "./Home.module.css";
 import { ParticlesBackground } from "../../components/ParticlesBackground/ParticlesBackground";
 import { Header } from "../../sections/header/Header";
 import { CustomCursor } from "../../components/CustomCursor/CustomCursor";
-import { Nav } from "../../components/Nav/Nav";
 import { Works } from "../../sections/Works/Works";
 import { Contact } from "../../sections/Contact/Contact";
 import { About } from "../../sections/About/About";
+import { NavContainer } from "../../NavContainer/NavContainer";
 
 const Home: React.FC = () => (
   <>
-    <Nav />
+    <NavContainer />
     <CustomCursor />
     <Header />
     <About />

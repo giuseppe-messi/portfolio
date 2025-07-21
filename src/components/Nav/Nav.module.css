@@ -10,9 +10,7 @@
   height: 3em;
   font-size: 1.2em;
   background-color: white;
-  transition: background-color 0.3s;
   padding: 0 1em;
-  font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -33,4 +31,42 @@
 .nav a {
   all: unset;
   cursor: pointer;
+  color: var(--color-primary);
 }
+
+/* .mobileNav {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  background: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: 0 1em;
+  font-weight: 900;
+}
+
+.mobileNav .logoHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobileNav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2em;
+  font-size: 1.2em;
+} */
+
+/* @media screen and (max-width: 600px) {
+  .nav {
+    display: none;
+  }
+  .mobileNav {
+    display: flex;
+  }
+} */
