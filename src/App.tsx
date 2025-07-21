@@ -1,7 +1,6 @@
 import React from "react";
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import { ErrorBoundary } from "./components/ErrorBoundary/ErrorBoundary";
-import "./App.css";
 import Home from "./pages/Home/Home";
 import NotFound from "./pages/NotFound/NotFound";
 

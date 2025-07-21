@@ -3,7 +3,7 @@ import styles from "./SayHi.module.css";
 export const SayHi = () => (
   // <div className={styles.box}>
   <svg
-    className={styles.cutout}
+    className={styles.sayhi}
     viewBox="0 0 800 200"
     preserveAspectRatio="xMidYMid meet"
   >
@@ -15,7 +15,7 @@ export const SayHi = () => (
           y="50%"
           textAnchor="middle"
           dy=".35em"
-          fontSize="130"
+          fontSize="80"
           fontWeight="bold"
           fill="black"
         >

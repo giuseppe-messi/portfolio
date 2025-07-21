@@ -8,17 +8,3 @@
   font-size: 1.125rem;
   margin-bottom: var(--space-md);
 }
-
-.parallax {
-  position: relative;
-  overflow: hidden;
-}
-
-.form-wrapper {
-  transform: translateY(100px);
-  transition: transform 0.5s ease-out;
-}
-
-.parallax:hover .form-wrapper {
-  transform: translateY(0px);
-}

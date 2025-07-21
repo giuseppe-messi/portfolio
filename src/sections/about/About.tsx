@@ -1,42 +1,66 @@
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
+import { useCursorMagnify } from "../../stores/useCursorMagnify";
+import styles from "./About.module.css";
 
 export const About = () => {
+  const { setMagnify } = useCursorMagnify();
+
   return (
     <section className="section">
       <h2>
         <AnimatedText text="About" />
       </h2>
-      <div>
+      <div className={styles.contentBox}>
         <p>
-          I’m Giuseppe Messina, a Senior Front-End Engineer based in London,
-          with over eight years of experience architecting and delivering
-          high-performance React applications for commercial clients. Although
-          most of my professional work lives behind NDAs and copyright
-          restrictions, those projects have given me an in-depth understanding
-          of scalable component design, rigorous type safety with TypeScript,
-          and end-to-end testing strategies that ensure reliability in
-          production. To share my approach and proficiency, I’ve built a
-          comprehensive GitHub showcase where I’ve distilled the core of my
-          React expertise into a single monorepo. Inside you’ll find a
-          production-ready Design System demonstrating best practices in
-          accessibility, theming, and performance optimization, alongside a
-          collection of micro-demos that highlight patterns ranging from state
-          management and routing to PWA caching and cross-platform UI. Beyond
-          that, I’ve published standalone repositories—everything from Python
-          algorithm implementations to a full-stack COVID-19 information
-          hub—that exemplify clean code, thoughtful documentation, and robust
-          build pipelines. Every repository reflects my commitment to clear,
-          self-documenting code: components and hooks are named for intent,
-          fully typed, and accompanied by unit and integration tests. Automated
-          linting, formatting, and type-checking run in CI to keep standards
-          high, while Storybook-powered documentation lives side-by-side with
-          interactive examples. Whether you’re looking for a deep dive into
-          React fundamentals or a glimpse at my broader programming interests,
-          you’ll find it all in one place. I invite you to explore my work and
-          connect with me on GitHub: 🔗 https://github.com/giuseppe-messina Feel
-          free to reach out via email (giuseppe91messina@gmail.com) or LinkedIn
-          if you’d like to discuss potential collaborations, open roles, or just
-          geek out over the latest React features.{" "}
+          I’m <strong>Giuseppe Messina</strong>, a{" "}
+          <strong>Senior Front-End Engineer</strong> based in London, with over
+          eight years of experience building high-performance React applications
+          for commercial clients. While most of my professional projects are
+          under NDAs and copyright restrictions, I’ve put together a{" "}
+          <strong>GitHub showcase</strong> where I share my approach to modern
+          front-end development.
+        </p>
+
+        <br />
+
+        <p>
+          The core of the showcase is a <strong>single monorepo</strong> that
+          reflects how I like to work day-to-day. It focuses on{" "}
+          <strong>React</strong> and <strong>TypeScript</strong>, with a strong
+          emphasis on <strong>type safety</strong>,{" "}
+          <strong>scalable component design</strong>, and{" "}
+          <strong>clean, maintainable code</strong>. You’ll see examples of
+          testing with <strong>Jest</strong> and{" "}
+          <strong>React Testing Library</strong>, code consistency enforced with{" "}
+          <strong>ESLint</strong>, and automated accessibility checks using{" "}
+          <strong>jest-axe</strong>.
+        </p>
+
+        <br />
+
+        <p>
+          I’ve included patterns like <strong>optimistic UI updates</strong>,{" "}
+          <strong>authentication flows</strong>,{" "}
+          <strong>permission-based routes</strong>, <strong>theming</strong>,{" "}
+          <strong>state management strategies</strong>, and{" "}
+          <strong>performance optimizations</strong>. The monorepo is a{" "}
+          <strong>continuous work in progress</strong>, with updates and
+          improvements added regularly as I explore new tools and techniques.
+        </p>
+
+        <br />
+
+        <p>
+          If you’re curious about how I approach building modern front-end
+          applications, you can explore it all on{" "}
+          <a
+            href="https://github.com/giuseppe-messi"
+            onMouseEnter={() => setMagnify(true)}
+            onMouseLeave={() => setMagnify(false)}
+          >
+            <strong>my GitHub page</strong>
+          </a>
+          . Feel free to get in touch using the form below.
         </p>
       </div>
     </section>

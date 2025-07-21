@@ -5,9 +5,8 @@ import { Header } from "../../sections/header/Header";
 import { CustomCursor } from "../../components/CustomCursor/CustomCursor";
 import { Nav } from "../../components/Nav/Nav";
 import { Works } from "../../sections/Works/Works";
-import { SayHi } from "../../sections/SayHi/SayHi";
 import { Contact } from "../../sections/Contact/Contact";
-import { About } from "../../sections/about/About";
+import { About } from "../../sections/About/About";
 
 const Home: React.FC = () => (
   <>
@@ -19,10 +18,7 @@ const Home: React.FC = () => (
       <Works />
     </div>
 
-    <div className={styles.parallax}>
-      <SayHi />
-      <Contact />
-    </div>
+    <Contact />
 
     <ParticlesBackground />
   </>

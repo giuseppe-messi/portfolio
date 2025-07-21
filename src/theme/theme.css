@@ -6,7 +6,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+#root {
+  width: 100%;
+}
 :root {
   font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -49,6 +51,10 @@
   --input-focus: #0070f3;
 }
 
+#root {
+  width: 100%;
+}
+
 body {
   margin: 0;
   display: flex;
@@ -75,6 +81,12 @@ h2 {
   text-align: center;
 }
 
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
 button {
   border-radius: var(--app-radius);
   border: 1px solid transparent;
@@ -94,17 +106,10 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
-/* .section {
-  padding: 30px;
-  background: #ffffff8a;
-  border-radius: 10px;
-  border: 3px solid #00ffc92e;
-  font-size: 1.2em;
-  margin-top: 6em;
-  line-height: 1.9;
-} */
 .section {
   font-size: 1.2em;
   line-height: 1.9;
   margin: 3em auto;
+  max-width: 1000px;
+  border-top: 5px solid #000000;
 }

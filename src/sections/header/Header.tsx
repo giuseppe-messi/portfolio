@@ -12,12 +12,13 @@ export const Header = memo(() => (
         <span className={styles.lastName}>Messina</span>
       </h1>
       <h2>
-        A Web Developer's Playground <span></span>
+        Front-End Without the Noise <span></span>
       </h2>
       <div className={styles.headingParagraph}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut est quam,
-        bibendum a magna ac, sollicitudin ultricies eros. Mauris eu leo sed
-        sapien hendrerit porttitor
+        I care about writing clear, maintainable code and building user
+        interfaces that feel smooth and reliable. This space is where I share my
+        approach to front-end development through open-source projects and
+        practical demos.
       </div>
     </div>
 

@@ -56,9 +56,6 @@
   padding: 4em 3em;
 }
 
-.cutout {
-  /* width: 100%; */
-  /* height: 300px; */
-  display: block;
-  /* margin: 2rem 0; */
+.sayhi {
+  margin-bottom: -1px;
 }
