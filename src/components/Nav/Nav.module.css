@@ -1,3 +1,7 @@
+.logo {
+  font-size: 2em;
+}
+
 .nav {
   position: fixed;
   top: 0;
@@ -5,19 +9,15 @@
   width: 100%;
   height: 3em;
   font-size: 1.2em;
-  background-color: transparent;
+  background-color: white;
   transition: background-color 0.3s;
   padding: 0 1em;
-  color: black;
   font-weight: bold;
   display: flex;
   align-items: center;
   justify-content: space-between;
   z-index: 1;
-}
-
-.nav.passed {
-  background-color: black;
+  font-weight: 900;
 }
 
 .nav ul {
@@ -27,6 +27,10 @@
 
 .nav ul li {
   list-style-type: none;
-  cursor: pointer;
   padding: 0 1em;
+}
+
+.nav a {
+  all: unset;
+  cursor: pointer;
 }

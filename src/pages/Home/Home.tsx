@@ -10,11 +10,11 @@ import { About } from "../../sections/About/About";
 
 const Home: React.FC = () => (
   <>
+    <Nav />
+    <CustomCursor />
+    <Header />
+    <About />
     <div className={styles.container}>
-      <Nav />
-      <CustomCursor />
-      <Header />
-      <About />
       <Works />
     </div>
 

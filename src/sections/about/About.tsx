@@ -6,62 +6,64 @@ export const About = () => {
   const { setMagnify } = useCursorMagnify();
 
   return (
-    <section className="section">
-      <h2>
-        <AnimatedText text="About" />
-      </h2>
-      <div className={styles.contentBox}>
-        <p>
-          I’m <strong>Giuseppe Messina</strong>, a{" "}
-          <strong>Senior Front-End Engineer</strong> based in London, with over
-          eight years of experience building high-performance React applications
-          for commercial clients. While most of my professional projects are
-          under NDAs and copyright restrictions, I’ve put together a{" "}
-          <strong>GitHub showcase</strong> where I share my approach to modern
-          front-end development.
-        </p>
+    <section id="about" className="section blackSection">
+      <div className="sectionBox">
+        <h2>
+          <AnimatedText text="About" />
+        </h2>
+        <div>
+          <p>
+            I’m <strong className={styles.bigger}>Giuseppe Messina</strong>, a{" "}
+            <strong className={styles.big}>Senior Front-End Engineer</strong>{" "}
+            based in London, with over eight years of experience building
+            high-performance React applications for commercial clients. While
+            most of my professional projects are under NDAs and copyright
+            restrictions, I’ve put together a <strong>GitHub showcase</strong>{" "}
+            where I share my approach to modern front-end development.
+          </p>
 
-        <br />
+          <br />
 
-        <p>
-          The core of the showcase is a <strong>single monorepo</strong> that
-          reflects how I like to work day-to-day. It focuses on{" "}
-          <strong>React</strong> and <strong>TypeScript</strong>, with a strong
-          emphasis on <strong>type safety</strong>,{" "}
-          <strong>scalable component design</strong>, and{" "}
-          <strong>clean, maintainable code</strong>. You’ll see examples of
-          testing with <strong>Jest</strong> and{" "}
-          <strong>React Testing Library</strong>, code consistency enforced with{" "}
-          <strong>ESLint</strong>, and automated accessibility checks using{" "}
-          <strong>jest-axe</strong>.
-        </p>
+          <p>
+            The core of the showcase is a <strong>single monorepo</strong> that
+            reflects how I like to work day-to-day. It focuses on{" "}
+            <strong>React</strong> and <strong>TypeScript</strong>, with a
+            strong emphasis on <strong>type safety</strong>,{" "}
+            <strong>scalable component design</strong>, and{" "}
+            <strong>clean, maintainable code</strong>. You’ll see examples of
+            testing with <strong>Jest</strong> and{" "}
+            <strong>React Testing Library</strong>, code consistency enforced
+            with <strong>ESLint</strong>, and automated accessibility checks
+            using <strong>jest-axe</strong>.
+          </p>
 
-        <br />
+          <br />
 
-        <p>
-          I’ve included patterns like <strong>optimistic UI updates</strong>,{" "}
-          <strong>authentication flows</strong>,{" "}
-          <strong>permission-based routes</strong>, <strong>theming</strong>,{" "}
-          <strong>state management strategies</strong>, and{" "}
-          <strong>performance optimizations</strong>. The monorepo is a{" "}
-          <strong>continuous work in progress</strong>, with updates and
-          improvements added regularly as I explore new tools and techniques.
-        </p>
+          <p>
+            I’ve included patterns like <strong>optimistic UI updates</strong>,{" "}
+            <strong>authentication flows</strong>,{" "}
+            <strong>permission-based routes</strong>, <strong>theming</strong>,{" "}
+            <strong>state management strategies</strong>, and{" "}
+            <strong>performance optimizations</strong>. The monorepo is a{" "}
+            <strong>continuous work in progress</strong>, with updates and
+            improvements added regularly as I explore new tools and techniques.
+          </p>
 
-        <br />
+          <br />
 
-        <p>
-          If you’re curious about how I approach building modern front-end
-          applications, you can explore it all on{" "}
-          <a
-            href="https://github.com/giuseppe-messi"
-            onMouseEnter={() => setMagnify(true)}
-            onMouseLeave={() => setMagnify(false)}
-          >
-            <strong>my GitHub page</strong>
-          </a>
-          . Feel free to get in touch using the form below.
-        </p>
+          <p>
+            If you’re curious about how I approach building modern front-end
+            applications, you can explore it all on{" "}
+            <a
+              href="https://github.com/giuseppe-messi"
+              onMouseEnter={() => setMagnify(true)}
+              onMouseLeave={() => setMagnify(false)}
+            >
+              <strong className={styles.bigger}>my GitHub page</strong>
+            </a>
+            . Feel free to get in touch using the form below.
+          </p>
+        </div>
       </div>
     </section>
   );

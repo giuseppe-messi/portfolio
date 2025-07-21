@@ -3,27 +3,38 @@ import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 import styles from "./Header.module.css";
 
 import { memo } from "react";
+import { useCursorMagnify } from "../../stores/useCursorMagnify";
 
-export const Header = memo(() => (
-  <header className={clsx("section", styles.header)}>
-    <div className={styles.headingWrap}>
-      <h1>
-        <AnimatedText text="Giuseppe" />
-        <span className={styles.lastName}>Messina</span>
-      </h1>
-      <h2>
-        Front-End Without the Noise <span></span>
-      </h2>
-      <div className={styles.headingParagraph}>
-        I care about writing clear, maintainable code and building user
-        interfaces that feel smooth and reliable. This space is where I share my
-        approach to front-end development through open-source projects and
-        practical demos.
+export const Header = memo(() => {
+  const { setMagnify } = useCursorMagnify();
+
+  return (
+    <header className={clsx("section", styles.header)}>
+      <div className={styles.headingWrap}>
+        <h1>
+          <AnimatedText text="Giuseppe" />
+          <span className={styles.lastName}>Messina</span>
+        </h1>
+        <h2>
+          Front-End Without the Noise <span></span>
+        </h2>
+        <div className={styles.headingParagraph}>
+          I care about writing clear, maintainable code and building user
+          interfaces that feel smooth and reliable. This space is where I share
+          my approach to front-end development through open-source projects and
+          practical demos.
+        </div>
       </div>
-    </div>
 
-    <div className={styles.arrowBox}>
-      <div className={styles.arrow} />
-    </div>
-  </header>
-));
+      <div className={styles.arrowBox}>
+        <a
+          href="#about"
+          onMouseEnter={() => setMagnify(true)}
+          onMouseLeave={() => setMagnify(false)}
+        >
+          <div className={styles.arrow} />
+        </a>
+      </div>
+    </header>
+  );
+});

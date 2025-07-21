@@ -6,9 +6,15 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  scroll-behavior: smooth;
+}
+
 #root {
   width: 100%;
 }
+
 :root {
   font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
@@ -109,7 +115,24 @@ button:focus-visible {
 .section {
   font-size: 1.2em;
   line-height: 1.9;
-  margin: 3em auto;
+}
+
+.section.whiteSection {
+}
+
+.section.blackSection {
+  background: black;
+  color: white;
+}
+
+.sectionBox {
+  padding: 2em 0;
+  margin: auto;
   max-width: 1000px;
-  border-top: 5px solid #000000;
+  text-align: justify;
+}
+
+.sectionBox.blackSection {
+  background: black;
+  color: white;
 }
