@@ -14,16 +14,17 @@
 }
 
 .header {
-  height: 100vh;
-  padding: 0 3em;
+  min-height: 100vh;
+  padding-block: 4rem;
   display: flex;
   justify-content: center;
-  /* position: relative; */
+  align-items: center;
   overflow: hidden;
+  border: none;
+  font-size: 1em;
 }
 
 .headingWrap {
-  margin-top: 5em;
   max-width: 29em;
 }
 
@@ -40,6 +41,8 @@
 
 .headingWrap h2 {
   text-align: justify;
+  text-align-last: justify;
+  margin-bottom: 1em;
 }
 
 .headingWrap h2 > span {
@@ -49,15 +52,16 @@
 
 .headingParagraph {
   text-align: justify;
+  font-weight: 400;
 }
 
 .arrowBox {
-  background: black;
+  background: var(--color-primary);
   color: white;
   position: absolute;
-  bottom: -7em;
-  width: 12em;
-  height: 12em;
+  bottom: -3em;
+  width: 7.5em;
+  height: 7.5em;
   border-radius: 50%;
 }
 
@@ -65,7 +69,7 @@
   position: absolute;
   top: 2.5em;
   left: 50%;
-  width: 17%;
+  width: 22%;
   height: 5px;
   background-color: #fff;
   border-radius: 3px;
@@ -92,4 +96,28 @@
 .arrow::after {
   top: -5px;
   transform: rotate(45deg);
+}
+
+@media screen and (max-width: 700px) {
+  .arrowBox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headingWrap h1 {
+    font-size: 1.8em;
+  }
+  .header {
+    padding: 0 2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .headingWrap h1 {
+    font-size: 1.5em;
+  }
+  .header {
+    padding: 0 1em;
+  }
 }

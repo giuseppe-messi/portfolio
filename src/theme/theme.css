@@ -1,4 +1,3 @@
-/* 1. Remove browser default margins & paddings */
 *,
 *::before,
 *::after {
@@ -10,7 +9,6 @@
 :root {
   font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  font-weight: 400;
   background-color: #242424;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
@@ -49,12 +47,10 @@
   --input-focus: #0070f3;
 }
 
-body {
-  margin: 0;
-  display: flex;
-  place-items: center;
-  min-width: 320px;
-  min-height: 100vh;
+html {
+  scroll-behavior: smooth;
+  width: 100%;
+  color: var(--color-primary);
 }
 
 a {
@@ -71,7 +67,17 @@ h1 {
   line-height: 1.5;
 }
 
-button {
+h2 {
+  text-align: center;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+/* button {
   border-radius: var(--app-radius);
   border: 1px solid transparent;
   padding: 0.3em 1.2em;
@@ -82,10 +88,46 @@ button {
   cursor: pointer;
   transition: border-color 0.25s;
 }
+
 button:hover {
   border-color: #646cff;
 }
+
 button:focus,
 button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
+} */
+
+.section {
+  font-size: 1.2em;
+  font-weight: 100;
+  line-height: 1.9;
+}
+
+.section.whiteSection {
+  color: var(--color-primary);
+  font-weight: 400;
+}
+
+.section.blackSection {
+  background: var(--color-primary);
+  color: white;
+}
+
+.sectionBox {
+  padding: 2em;
+  margin: auto;
+  max-width: 1000px;
+  text-align: justify;
+}
+
+.sectionBox.blackSection {
+  background: var(--color-primary);
+  color: white;
+}
+
+@media screen and (max-width: 600px) {
+  .sectionBox {
+    padding: 1em;
+  }
 }

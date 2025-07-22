@@ -1,27 +1,36 @@
+import clsx from "clsx";
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 import styles from "./Header.module.css";
+import { useCursorMagnify } from "../../stores/useCursorMagnify";
 
-import { memo } from "react";
+export const Header = () => {
+  const { setMagnify } = useCursorMagnify();
 
-export const Header = memo(() => (
-  <header className={styles.header}>
-    <div className={styles.headingWrap}>
-      <h1>
-        <AnimatedText text="Giuseppe" />
-        <span className={styles.lastName}>Messina</span>
-      </h1>
-      <h2>
-        A Web Developer's Playground <span></span>
-      </h2>
-      <div className={styles.headingParagraph}>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut est quam,
-        bibendum a magna ac, sollicitudin ultricies eros. Mauris eu leo sed
-        sapien hendrerit porttitor
+  return (
+    <header className={clsx("section", styles.header)}>
+      <div className={styles.headingWrap}>
+        <h1>
+          <AnimatedText text="Giuseppe" />
+          <span className={styles.lastName}>Messina</span>
+        </h1>
+        <h2>Front-End Without the Noise</h2>
+        <p className={styles.headingParagraph}>
+          I care about writing clear, maintainable code and building user
+          interfaces that feel smooth and reliable. This space is where I share
+          my approach to front-end development through open-source projects and
+          practical demos.
+        </p>
       </div>
-    </div>
 
-    <div className={styles.arrowBox}>
-      <div className={styles.arrow} />
-    </div>
-  </header>
-));
+      <div className={styles.arrowBox}>
+        <a
+          href="#about"
+          onMouseEnter={() => setMagnify(true)}
+          onMouseLeave={() => setMagnify(false)}
+        >
+          <div className={styles.arrow} />
+        </a>
+      </div>
+    </header>
+  );
+};

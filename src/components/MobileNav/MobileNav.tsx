@@ -1,0 +1,72 @@
+import { useCallback, useMemo, useRef, useState } from "react";
+import styles from "./MobileNav.module.css";
+import type { NavItem } from "../NavContainer/NavContainer";
+import { useCursorMagnify } from "../../stores/useCursorMagnify";
+import { useCloseNav } from "../hooks/useCloseNav";
+
+type MobileNavProps = {
+  navItems: NavItem[];
+};
+
+export const MobileNav = ({ navItems }: MobileNavProps) => {
+  const [show, setShow] = useState(false);
+  const { magnify, setMagnify } = useCursorMagnify();
+  const navRef = useRef(null);
+  useCloseNav(navRef, () => setShow(false), show);
+
+  const handleToggle = useCallback(() => {
+    setShow((s) => !s);
+    setMagnify(!magnify);
+  }, [magnify, setMagnify]);
+
+  const magnifyEvents = useMemo(
+    () => ({
+      onMouseEnter: () => setMagnify(true),
+      onMouseLeave: () => setMagnify(false)
+    }),
+    [setMagnify]
+  );
+
+  return (
+    <nav ref={navRef} className={styles.mobileNav}>
+      {show && (
+        <>
+          <div className={styles.logoHeader}>
+            <a href="#" onClick={handleToggle} {...magnifyEvents}>
+              <span className={styles.logo}>Gm</span>
+            </a>
+
+            <span
+              className={styles.closeIcon}
+              onClick={handleToggle}
+              {...magnifyEvents}
+            >
+              🗙
+            </span>
+          </div>
+          <ul>
+            {navItems.map((i) => (
+              <li>
+                <a href={i.link} onClick={handleToggle} {...magnifyEvents}>
+                  {i.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {!show && (
+        <button
+          className={styles.hamburger}
+          onClick={handleToggle}
+          {...magnifyEvents}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      )}
+    </nav>
+  );
+};

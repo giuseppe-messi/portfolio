@@ -1,57 +1,35 @@
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 import styles from "./Nav.module.css";
+import type { NavItem } from "../NavContainer/NavContainer";
+import { useMemo } from "react";
 
-import { memo } from "react";
-// import { navItems } from "./navItems";
-// import { withCursorHoverFunctionality } from "src/helpers/withCursorHoverFunctionality";
+type NavProps = {
+  navItems: NavItem[];
+};
 
-// interface NavProps {
-//   hasPassedHeader: boolean | null;
-// }
+export const Nav = ({ navItems }: NavProps) => {
+  const { setMagnify } = useCursorMagnify();
 
-const NAV_ITEMS = ["About", "Works", "Contact"];
+  const magnifyEvents = useMemo(
+    () => ({
+      onMouseEnter: () => setMagnify(true),
+      onMouseLeave: () => setMagnify(false)
+    }),
+    [setMagnify]
+  );
 
-export const Nav = memo(() =>
-  // { hasPassedHeader }: NavProps
-  {
-    // const ListItemWithCursorHoverFunctionality = useMemo(
-    //   () => withCursorHoverFunctionality(S.ListItem),
-    //   []
-    // );
-
-    const { setMagnify } = useCursorMagnify();
-
-    return (
-      <nav className={styles.nav}>
-        <div>GM</div>
-        <ul>
-          {NAV_ITEMS.map((i) => (
-            <li
-              onMouseEnter={() => setMagnify(true)}
-              onMouseLeave={() => setMagnify(false)}
-            >
-              {i}
-            </li>
-          ))}
-        </ul>
-      </nav>
-    );
-
-    // return (
-    //   <S.Nav hasPassedHeader={hasPassedHeader!}>
-    //     <div>GM</div>
-    //     <S.List>
-    //       {navItems.map((item) => {
-    //         const { name } = item;
-
-    //         return (
-    //           <ListItemWithCursorHoverFunctionality key={name}>
-    //             {name}
-    //           </ListItemWithCursorHoverFunctionality>
-    //         );
-    //       })}
-    //     </S.List>
-    //   </S.Nav>
-    // );
-  }
-);
+  return (
+    <nav className={styles.nav}>
+      <a href="#" {...magnifyEvents}>
+        <span className={styles.logo}>Gm</span>
+      </a>
+      <ul>
+        {navItems.map((i) => (
+          <li {...magnifyEvents}>
+            <a href={i.link}>{i.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
