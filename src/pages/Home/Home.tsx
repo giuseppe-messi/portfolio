@@ -9,8 +9,8 @@ import { About } from "../../sections/About/About";
 
 const Home: React.FC = () => (
   <>
-    <NavContainer />
     <CustomCursor />
+    <NavContainer />
     <Header />
     <About />
     <Works />

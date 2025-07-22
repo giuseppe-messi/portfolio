@@ -21,7 +21,7 @@ export const Nav = ({ navItems }: NavProps) => {
   return (
     <nav className={styles.nav}>
       <a href="#header" {...magnifyEvents}>
-        <span className={styles.logo}>Gm</span>
+        <span className={styles.logo}>gm</span>
       </a>
       <ul>
         {navItems.map((i) => (

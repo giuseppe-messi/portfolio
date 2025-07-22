@@ -62,16 +62,17 @@ export const ParticlesBackground = () => {
           direction: MoveDirection.none,
           enable: true,
           outModes: {
-            default: OutMode.bounce
+            default: OutMode.out
           },
+          warp: true,
           random: false,
-          speed: 2,
+          speed: 1.5,
           straight: false
         },
         number: {
           density: {
             enable: true,
-            area: 800
+            area: 1200
           },
           value: 160
         },
