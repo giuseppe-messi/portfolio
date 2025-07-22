@@ -2,7 +2,6 @@ import { useCallback, useMemo, useRef, useState } from "react";
 import styles from "./MobileNav.module.css";
 import type { NavItem } from "../NavContainer/NavContainer";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
-import { useCloseNav } from "../hooks/useCloseNav";
 
 type MobileNavProps = {
   navItems: NavItem[];
@@ -12,7 +11,6 @@ export const MobileNav = ({ navItems }: MobileNavProps) => {
   const [show, setShow] = useState(false);
   const { magnify, setMagnify } = useCursorMagnify();
   const navRef = useRef(null);
-  useCloseNav(navRef, () => setShow(false), show);
 
   const handleToggle = useCallback(() => {
     setShow((s) => !s);
@@ -33,7 +31,7 @@ export const MobileNav = ({ navItems }: MobileNavProps) => {
         <>
           <div className={styles.logoHeader}>
             <a href="#header" onClick={handleToggle} {...magnifyEvents}>
-              <span className={styles.logo}>Gm</span>
+              <span className={styles.logo}>gm</span>
             </a>
 
             <button

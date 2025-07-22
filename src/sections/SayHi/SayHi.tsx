@@ -16,7 +16,6 @@ export const SayHi = () => (
           dy=".35em"
           fontSize="80"
           fontWeight="bold"
-          fill="var(--color-primary)"
           className={styles.text}
         >
           Get in Touch

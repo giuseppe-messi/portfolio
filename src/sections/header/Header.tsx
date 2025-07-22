@@ -1,11 +1,8 @@
 import clsx from "clsx";
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 import styles from "./Header.module.css";
-import { useCursorMagnify } from "../../stores/useCursorMagnify";
 
 export const Header = () => {
-  const { setMagnify } = useCursorMagnify();
-
   return (
     <header id="header" className={clsx("section", styles.header)}>
       <div className={styles.headingWrap}>
@@ -20,17 +17,6 @@ export const Header = () => {
           my approach to front-end development through open-source projects and
           practical demos.
         </p>
-      </div>
-
-      <div className={styles.arrowBox}>
-        <a
-          href="#about"
-          onMouseEnter={() => setMagnify(true)}
-          onMouseLeave={() => setMagnify(false)}
-          aria-label="Scroll to About section"
-        >
-          <div className={styles.arrow} />
-        </a>
       </div>
     </header>
   );
