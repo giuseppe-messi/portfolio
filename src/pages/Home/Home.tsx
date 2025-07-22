@@ -4,8 +4,8 @@ import { Header } from "../../sections/header/Header";
 import { CustomCursor } from "../../components/CustomCursor/CustomCursor";
 import { Works } from "../../sections/Works/Works";
 import { Contact } from "../../sections/Contact/Contact";
-import { About } from "../../sections/About/About";
 import { NavContainer } from "../../components/NavContainer/NavContainer";
+import { About } from "../../sections/About/About";
 
 const Home: React.FC = () => (
   <>
