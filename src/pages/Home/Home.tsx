@@ -5,7 +5,7 @@ import { CustomCursor } from "../../components/CustomCursor/CustomCursor";
 import { Works } from "../../sections/Works/Works";
 import { Contact } from "../../sections/Contact/Contact";
 import { NavContainer } from "../../components/NavContainer/NavContainer";
-import { About } from "../../sections/about/About";
+import { About } from "../../sections/About-temp/About";
 
 const Home: React.FC = () => (
   <>
