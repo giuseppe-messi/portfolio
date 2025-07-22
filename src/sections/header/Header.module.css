@@ -56,55 +56,6 @@
   font-size: 1.2em;
 }
 
-.arrowBox {
-  background: var(--color-primary);
-  color: white;
-  position: absolute;
-  bottom: -3em;
-  width: 7.5em;
-  height: 7.5em;
-  border-radius: 50%;
-}
-
-.arrow {
-  position: absolute;
-  top: 2.5em;
-  left: 50%;
-  width: 22%;
-  height: 5px;
-  background-color: #fff;
-  border-radius: 3px;
-  transform: translateX(-50%) rotate(90deg);
-  animation: arrowAnimation 4s linear infinite;
-}
-
-.arrow::before,
-.arrow::after {
-  content: "";
-  position: absolute;
-  width: 60%;
-  height: 5px;
-  right: -4px;
-  background-color: #fff;
-  border-radius: 3px;
-}
-
-.arrow::before {
-  top: 5px;
-  transform: rotate(-45deg);
-}
-
-.arrow::after {
-  top: -5px;
-  transform: rotate(45deg);
-}
-
-@media screen and (max-width: 700px) {
-  .arrowBox {
-    display: none;
-  }
-}
-
 @media screen and (max-width: 600px) {
   .headingWrap h1 {
     font-size: 1.8em;

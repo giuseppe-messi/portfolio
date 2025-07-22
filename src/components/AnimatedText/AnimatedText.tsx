@@ -57,7 +57,9 @@ export const AnimatedText = ({ text }: AnimatedHeadingProps) => {
                   styles.letter,
                   letters[index] && styles.animate
                 )}
-                onMouseEnter={() => handleStart(index)}
+                onPointerEnter={(e) => {
+                  if (e.pointerType === "mouse") handleStart(index);
+                }}
                 onAnimationEnd={() => handleStop(index)}
                 aria-hidden="true" // purely decorative animation, for a11y
               >
