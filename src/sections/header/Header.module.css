@@ -14,13 +14,14 @@
 }
 
 .header {
-  height: 100vh;
-  padding: 0 3em;
+  min-height: 100vh;
+  padding-block: 4rem;
   display: flex;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   border: none;
+  font-size: 1em;
 }
 
 .headingWrap {
@@ -40,6 +41,8 @@
 
 .headingWrap h2 {
   text-align: justify;
+  text-align-last: justify;
+  margin-bottom: 1em;
 }
 
 .headingWrap h2 > span {
@@ -49,6 +52,7 @@
 
 .headingParagraph {
   text-align: justify;
+  font-weight: 400;
 }
 
 .arrowBox {
@@ -92,4 +96,28 @@
 .arrow::after {
   top: -5px;
   transform: rotate(45deg);
+}
+
+@media screen and (max-width: 700px) {
+  .arrowBox {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .headingWrap h1 {
+    font-size: 1.8em;
+  }
+  .header {
+    padding: 0 2em;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .headingWrap h1 {
+    font-size: 1.5em;
+  }
+  .header {
+    padding: 0 1em;
+  }
 }

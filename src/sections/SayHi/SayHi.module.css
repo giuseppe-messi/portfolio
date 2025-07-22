@@ -51,11 +51,6 @@
   animation: moveTextBG 20s linear infinite;
 }
 
-.box {
-  background: #ffffff8a;
-  padding: 4em 3em;
-}
-
 .sayhi {
-  margin-bottom: -1px;
+  margin-bottom: -10px;
 }

@@ -1,12 +1,7 @@
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 import styles from "./Nav.module.css";
-import type { NavItem } from "../../NavContainer/NavContainer";
-
-// const navitems = [
-//   { label: "About", link: "#about" },
-//   { label: "Works", link: "#works" },
-//   { label: "Contact", link: "#contact" }
-// ];
+import type { NavItem } from "../NavContainer/NavContainer";
+import { useMemo } from "react";
 
 type NavProps = {
   navItems: NavItem[];
@@ -14,57 +9,27 @@ type NavProps = {
 
 export const Nav = ({ navItems }: NavProps) => {
   const { setMagnify } = useCursorMagnify();
-  // const [show, setShow] = useState(false);
+
+  const magnifyEvents = useMemo(
+    () => ({
+      onMouseEnter: () => setMagnify(true),
+      onMouseLeave: () => setMagnify(false)
+    }),
+    [setMagnify]
+  );
 
   return (
-    <>
-      <nav className={styles.nav}>
-        <a
-          href="#"
-          onMouseEnter={() => setMagnify(true)}
-          onMouseLeave={() => setMagnify(false)}
-        >
-          <span className={styles.logo}>Gm</span>
-        </a>
-        <ul>
-          {navItems.map((i) => (
-            <li
-              onMouseEnter={() => setMagnify(true)}
-              onMouseLeave={() => setMagnify(false)}
-            >
-              <a href={i.link}>{i.label}</a>
-            </li>
-          ))}
-        </ul>
-      </nav>
-
-      {/* {show ? (
-        <nav className={styles.mobileNav}>
-          <div className={styles.logoHeader}>
-            <a
-              href="#"
-              onMouseEnter={() => setMagnify(true)}
-              onMouseLeave={() => setMagnify(false)}
-            >
-              <span className={styles.logo}>Gm</span>
-            </a>
-
-            <span className={styles.closeIcon}>X</span>
-          </div>
-          <ul>
-            {navitems.map((i) => (
-              <li
-                onMouseEnter={() => setMagnify(true)}
-                onMouseLeave={() => setMagnify(false)}
-              >
-                <a href={i.link}>{i.label}</a>
-              </li>
-            ))}
-          </ul>
-        </nav>
-      ) : (
-        <button className={styles.hamburger} aria-label="Menu">☰</button>
-      )} */}
-    </>
+    <nav className={styles.nav}>
+      <a href="#" {...magnifyEvents}>
+        <span className={styles.logo}>Gm</span>
+      </a>
+      <ul>
+        {navItems.map((i) => (
+          <li {...magnifyEvents}>
+            <a href={i.link}>{i.label}</a>
+          </li>
+        ))}
+      </ul>
+    </nav>
   );
 };

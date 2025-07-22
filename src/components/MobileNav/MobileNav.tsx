@@ -1,17 +1,20 @@
-import { useCallback, useMemo, useState } from "react";
+import { useCallback, useMemo, useRef, useState } from "react";
 import styles from "./MobileNav.module.css";
-import type { NavItem } from "../../NavContainer/NavContainer";
+import type { NavItem } from "../NavContainer/NavContainer";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
+import { useCloseNav } from "../hooks/useCloseNav";
 
 type MobileNavProps = {
   navItems: NavItem[];
 };
 
 export const MobileNav = ({ navItems }: MobileNavProps) => {
-  const [show, setShow] = useState(true);
+  const [show, setShow] = useState(false);
   const { magnify, setMagnify } = useCursorMagnify();
+  const navRef = useRef(null);
+  useCloseNav(navRef, () => setShow(false), show);
 
-  const handleToggleNav = useCallback(() => {
+  const handleToggle = useCallback(() => {
     setShow((s) => !s);
     setMagnify(!magnify);
   }, [magnify, setMagnify]);
@@ -24,41 +27,46 @@ export const MobileNav = ({ navItems }: MobileNavProps) => {
     [setMagnify]
   );
 
-  return show ? (
-    <nav className={styles.mobileNav}>
-      <div className={styles.logoHeader}>
-        <a href="#">
-          <span className={styles.logo}>Gm</span>
-        </a>
-
-        <span
-          className={styles.closeIcon}
-          onClick={handleToggleNav}
-          {...magnifyEvents}
-        >
-          X
-        </span>
-      </div>
-      <ul>
-        {navItems.map((i) => (
-          <li>
-            <a href={i.link} {...magnifyEvents}>
-              {i.label}
+  return (
+    <nav ref={navRef} className={styles.mobileNav}>
+      {show && (
+        <>
+          <div className={styles.logoHeader}>
+            <a href="#" onClick={handleToggle} {...magnifyEvents}>
+              <span className={styles.logo}>Gm</span>
             </a>
-          </li>
-        ))}
-      </ul>
+
+            <span
+              className={styles.closeIcon}
+              onClick={handleToggle}
+              {...magnifyEvents}
+            >
+              🗙
+            </span>
+          </div>
+          <ul>
+            {navItems.map((i) => (
+              <li>
+                <a href={i.link} onClick={handleToggle} {...magnifyEvents}>
+                  {i.label}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </>
+      )}
+      {!show && (
+        <button
+          className={styles.hamburger}
+          onClick={handleToggle}
+          {...magnifyEvents}
+          aria-label="Menu"
+        >
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      )}
     </nav>
-  ) : (
-    <button
-      className={styles.hamburger}
-      onClick={handleToggleNav}
-      {...magnifyEvents}
-      aria-label="Menu"
-    >
-      <span></span>
-      <span></span>
-      <span></span>
-    </button>
   );
 };

@@ -1,6 +1,5 @@
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
-// import styles from "./About.module.css";
 
 export const About = () => {
   const { setMagnify } = useCursorMagnify();

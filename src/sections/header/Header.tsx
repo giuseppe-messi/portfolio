@@ -1,11 +1,9 @@
 import clsx from "clsx";
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 import styles from "./Header.module.css";
-
-import { memo } from "react";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 
-export const Header = memo(() => {
+export const Header = () => {
   const { setMagnify } = useCursorMagnify();
 
   return (
@@ -15,15 +13,13 @@ export const Header = memo(() => {
           <AnimatedText text="Giuseppe" />
           <span className={styles.lastName}>Messina</span>
         </h1>
-        <h2>
-          Front-End Without the Noise <span></span>
-        </h2>
-        <div className={styles.headingParagraph}>
+        <h2>Front-End Without the Noise</h2>
+        <p className={styles.headingParagraph}>
           I care about writing clear, maintainable code and building user
           interfaces that feel smooth and reliable. This space is where I share
           my approach to front-end development through open-source projects and
           practical demos.
-        </div>
+        </p>
       </div>
 
       <div className={styles.arrowBox}>
@@ -37,4 +33,4 @@ export const Header = memo(() => {
       </div>
     </header>
   );
-});
+};

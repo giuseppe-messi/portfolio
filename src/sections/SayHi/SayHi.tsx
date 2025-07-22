@@ -1,7 +1,6 @@
 import styles from "./SayHi.module.css";
 
 export const SayHi = () => (
-  // <div className={styles.box}>
   <svg
     className={styles.sayhi}
     viewBox="0 0 800 200"
@@ -18,6 +17,7 @@ export const SayHi = () => (
           fontSize="80"
           fontWeight="bold"
           fill="var(--color-primary)"
+          className={styles.text}
         >
           Get in Touch
         </text>
@@ -30,5 +30,4 @@ export const SayHi = () => (
       mask="url(#cutout-text)"
     />
   </svg>
-  // </div>
 );
