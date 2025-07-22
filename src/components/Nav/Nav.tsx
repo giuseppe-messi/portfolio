@@ -25,7 +25,7 @@ export const Nav = ({ navItems }: NavProps) => {
       </a>
       <ul>
         {navItems.map((i) => (
-          <li {...magnifyEvents}>
+          <li key={i.label} {...magnifyEvents}>
             <a href={i.link}>{i.label}</a>
           </li>
         ))}

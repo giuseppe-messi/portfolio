@@ -46,7 +46,7 @@ export const MobileNav = ({ navItems }: MobileNavProps) => {
           </div>
           <ul>
             {navItems.map((i) => (
-              <li>
+              <li key={i.label}>
                 <a href={i.link} onClick={handleToggle} {...magnifyEvents}>
                   {i.label}
                 </a>
