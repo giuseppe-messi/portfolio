@@ -59,6 +59,7 @@ export const AnimatedText = ({ text }: AnimatedHeadingProps) => {
                 )}
                 onMouseEnter={() => handleStart(index)}
                 onAnimationEnd={() => handleStop(index)}
+                aria-hidden="true" // purely decorative animation, for a11y
               >
                 {letter}
               </span>

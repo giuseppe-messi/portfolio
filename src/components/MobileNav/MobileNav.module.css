@@ -43,6 +43,12 @@
   cursor: pointer;
 }
 
+.closeIcon {
+  font-size: 1.2em;
+  background: none;
+  border: none;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;

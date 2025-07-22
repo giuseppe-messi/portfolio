@@ -7,7 +7,7 @@ export const Header = () => {
   const { setMagnify } = useCursorMagnify();
 
   return (
-    <header className={clsx("section", styles.header)}>
+    <header id="header" className={clsx("section", styles.header)}>
       <div className={styles.headingWrap}>
         <h1>
           <AnimatedText text="Giuseppe" />
@@ -27,6 +27,7 @@ export const Header = () => {
           href="#about"
           onMouseEnter={() => setMagnify(true)}
           onMouseLeave={() => setMagnify(false)}
+          aria-label="Scroll to About section"
         >
           <div className={styles.arrow} />
         </a>

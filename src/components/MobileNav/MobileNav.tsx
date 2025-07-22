@@ -32,17 +32,17 @@ export const MobileNav = ({ navItems }: MobileNavProps) => {
       {show && (
         <>
           <div className={styles.logoHeader}>
-            <a href="#" onClick={handleToggle} {...magnifyEvents}>
+            <a href="#header" onClick={handleToggle} {...magnifyEvents}>
               <span className={styles.logo}>Gm</span>
             </a>
 
-            <span
+            <button
               className={styles.closeIcon}
               onClick={handleToggle}
               {...magnifyEvents}
             >
               🗙
-            </span>
+            </button>
           </div>
           <ul>
             {navItems.map((i) => (

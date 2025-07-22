@@ -20,7 +20,7 @@ export const Nav = ({ navItems }: NavProps) => {
 
   return (
     <nav className={styles.nav}>
-      <a href="#" {...magnifyEvents}>
+      <a href="#header" {...magnifyEvents}>
         <span className={styles.logo}>Gm</span>
       </a>
       <ul>

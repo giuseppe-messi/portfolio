@@ -14,23 +14,30 @@ export const Works = () => {
 
         <div className={styles.contentBox}>
           <p>
-            Most of my open-source code is structured inside a single{" "}
-            <strong>React Skillset Monorepo</strong>, designed to reflect how I
-            approach building modern front-end applications. The repository is
-            organized into two main areas:
+            Most of my open-source code is structured inside a single monorepo
+            named:{" "}
+            <a
+              href="https://github.com/giuseppe-messi/react-lab-mono"
+              onMouseEnter={() => setMagnify(true)}
+              onMouseLeave={() => setMagnify(false)}
+            >
+              <strong>React Lab Mono</strong>
+            </a>{" "}
+            , designed to reflect how I approach building modern front-end
+            applications. The repository is organized into two main areas:
           </p>
           <br />
 
           <ul>
             <li>
-              <strong>Design System</strong>: a production-ready set of fully
+              <strong>packages/ui</strong>: a production-ready set of fully
               typed, accessible React components, built with scalability,
               theming, and testing in mind.
             </li>
             <br />
             <li>
-              <strong>Examples &amp; Micro-demos</strong>: a set of focused,
-              real-world demos showcasing practical patterns.
+              <strong>apps/</strong>: a set of focused, real-world demos
+              showcasing practical patterns.
             </li>
             <br />
           </ul>

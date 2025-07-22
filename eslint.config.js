@@ -1,23 +1,34 @@
-import js from '@eslint/js'
-import globals from 'globals'
-import reactHooks from 'eslint-plugin-react-hooks'
-import reactRefresh from 'eslint-plugin-react-refresh'
-import tseslint from 'typescript-eslint'
-import { globalIgnores } from 'eslint/config'
+import js from "@eslint/js";
+import globals from "globals";
+import reactHooks from "eslint-plugin-react-hooks";
+import reactRefresh from "eslint-plugin-react-refresh";
+import tseslint from "typescript-eslint";
+import { globalIgnores } from "eslint/config";
+import jsxA11y from "eslint-plugin-jsx-a11y";
+
+const allJsxA11yRules = Object.fromEntries(
+  Object.keys(jsxA11y.rules).map((name) => [`jsx-a11y/${name}`, "error"])
+);
 
 export default tseslint.config([
-  globalIgnores(['dist']),
+  globalIgnores(["dist"]),
   {
-    files: ['**/*.{ts,tsx}'],
+    files: ["**/*.{ts,tsx}"],
     extends: [
       js.configs.recommended,
       tseslint.configs.recommended,
-      reactHooks.configs['recommended-latest'],
-      reactRefresh.configs.vite,
+      reactHooks.configs["recommended-latest"],
+      reactRefresh.configs.vite
     ],
+    plugins: {
+      "jsx-a11y": jsxA11y
+    },
     languageOptions: {
       ecmaVersion: 2020,
-      globals: globals.browser,
+      globals: globals.browser
     },
-  },
-])
+    rules: {
+      ...allJsxA11yRules
+    }
+  }
+]);
