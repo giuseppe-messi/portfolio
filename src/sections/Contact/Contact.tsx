@@ -7,7 +7,22 @@ export const Contact = () => (
     <div className={styles.box}>
       <div></div>
 
-      <form className={styles.contactForm}>
+      <form
+        name="contact"
+        method="POST"
+        data-netlify="true"
+        netlify-honeypot="bot-field"
+        className={styles.contactForm}
+      >
+        <input type="hidden" name="form-name" value="contact" />
+
+        {/* Honeypot */}
+        <p style={{ display: "none" }}>
+          <label htmlFor="bot-field">
+            Don’t fill this out: <input name="bot-field" aria-label="none" />
+          </label>
+        </p>
+
         <label htmlFor="name">
           Name
           <input
