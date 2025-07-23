@@ -39,7 +39,7 @@ export const MobileNav = ({ navItems }: MobileNavProps) => {
               onClick={handleToggle}
               {...magnifyEvents}
             >
-              🗙
+              &times;
             </button>
           </div>
           <ul>
