@@ -19,8 +19,8 @@ export const Contact = () => {
           className={styles.contactForm}
           onSubmit={onSubmit}
         >
-          {/* Netlify injects this at build time, no need for it unless submit is done via JS and not via the browser normal flow */}
-          {/* <input type="hidden" name="form-name" value="contact" /> */}
+          {/* needed for Netlify */}
+          <input type="hidden" name="form-name" value="contact" />
 
           {/* Honeypot */}
           <p style={{ display: "none" }}>
