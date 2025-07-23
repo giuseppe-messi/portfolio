@@ -12,6 +12,7 @@ export const Contact = () => (
         method="POST"
         data-netlify="true"
         netlify-honeypot="bot-field"
+        action="/thanks.html"
         className={styles.contactForm}
       >
         {/* Netlify injects this at build time, no need for it unless submit is done via JS and not via the browser normal flow */}
