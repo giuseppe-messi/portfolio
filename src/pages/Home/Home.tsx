@@ -6,6 +6,7 @@ import { Works } from "../../sections/Works/Works";
 import { Contact } from "../../sections/Contact/Contact";
 import { NavContainer } from "../../components/NavContainer/NavContainer";
 import { About } from "../../sections/About/About";
+import { Toaster } from "../../components/Toaster/Toaster";
 
 const Home: React.FC = () => (
   <>
@@ -16,6 +17,7 @@ const Home: React.FC = () => (
     <Works />
     <Contact />
     <ParticlesBackground />
+    <Toaster />
   </>
 );
 
