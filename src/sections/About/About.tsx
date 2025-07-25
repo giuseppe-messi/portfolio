@@ -57,6 +57,7 @@ export const About = () => {
               href="https://github.com/giuseppe-messi"
               onMouseEnter={() => setMagnify(true)}
               onMouseLeave={() => setMagnify(false)}
+              target="_blank"
             >
               <strong>my GitHub page</strong>
             </a>
