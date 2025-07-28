@@ -1,23 +1,41 @@
 import styles from "./SocialLinks.module.css";
-import shortWhatsAppLogo from "../../assets/short-whatsapp-black.png";
-import shortInLogo from "../../assets/short-in-black.png";
+import whatsAppBlackLogo from "../../assets/whatsapp-black.png";
+import inBlackLogo from "../../assets/in-black.png";
+import whatsAppWhiteLogo from "../../assets/whatsapp-white.png";
+import inWhiteLogo from "../../assets/in-white.png";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 
-const links = [
-  {
-    icon: <img src={shortWhatsAppLogo} alt="whatsApp logo" />,
-    url: "https://wa.me/447586474058",
-    label: "Chat on WhatsApp"
-  },
-  {
-    icon: <img src={shortInLogo} alt="linkedIn logo" />,
-    url: "https://www.linkedin.com/in/giuseppe-messina/",
-    label: "Connect on LinkedIn"
-  }
-];
+type SocialLinksProps = {
+  theme: "dark" | "light";
+};
 
-export const SocialLinks = () => {
+const logoMap = {
+  light: {
+    whatsApp: whatsAppBlackLogo,
+    linkedin: inBlackLogo
+  },
+  dark: {
+    whatsApp: whatsAppWhiteLogo,
+    linkedin: inWhiteLogo
+  }
+};
+
+export const SocialLinks = ({ theme = "light" }: SocialLinksProps) => {
   const { setMagnify } = useCursorMagnify();
+  const { whatsApp, linkedin } = logoMap[theme];
+
+  const links = [
+    {
+      icon: <img src={whatsApp} alt="whatsApp logo" />,
+      url: "https://wa.me/447586474058",
+      label: "Chat on WhatsApp"
+    },
+    {
+      icon: <img src={linkedin} alt="linkedIn logo" />,
+      url: "https://www.linkedin.com/in/giuseppe-messina/",
+      label: "Connect on LinkedIn"
+    }
+  ];
 
   return (
     <section className={styles.socialSection}>

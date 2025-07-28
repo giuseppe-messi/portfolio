@@ -62,7 +62,7 @@ export const Nav = () => {
               ))}
             </ul>
             <div className={styles.socialLinksBox}>
-              <SocialLinks />
+              <SocialLinks theme="dark" />
             </div>
           </div>
         </>

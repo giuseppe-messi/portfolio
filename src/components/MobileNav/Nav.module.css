@@ -12,9 +12,15 @@
   z-index: 1;
 }
 
-.open {
+.nav.open {
   height: 100vh;
   overflow-x: auto;
+  background-color: var(--color-primary);
+}
+.nav.open a,
+.nav.open button,
+.nav.open h2 {
+  color: var(--color-light-white);
 }
 
 .nav a {
