@@ -1,3 +1,7 @@
 .contentBox {
   background: #ffffffab;
 }
+
+.contentBox strong {
+  font-weight: 500;
+}

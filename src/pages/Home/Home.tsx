@@ -4,19 +4,20 @@ import { Header } from "../../sections/header/Header";
 import { CustomCursor } from "../../components/CustomCursor/CustomCursor";
 import { Works } from "../../sections/Works/Works";
 import { Contact } from "../../sections/Contact/Contact";
-import { NavContainer } from "../../components/NavContainer/NavContainer";
 import { About } from "../../sections/About/About";
 import { Toaster } from "@react-lab-mono/ui";
-// import { Toaster } from "../../components/Toaster/Toaster";
+import { Footer } from "../../sections/Footer/Footer";
+import { Nav } from "../../components/MobileNav/Nav";
 
 const Home: React.FC = () => (
   <>
     <CustomCursor />
-    <NavContainer />
+    <Nav />
     <Header />
     <About />
     <Works />
     <Contact />
+    <Footer />
     <ParticlesBackground />
     <Toaster />
   </>

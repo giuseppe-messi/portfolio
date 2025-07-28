@@ -1,5 +1,3 @@
-// import { useToastersStore } from "../stores/useToastersStore";
-
 import { useToastersStore } from "@react-lab-mono/ui";
 
 export const useFormSubmit = () => {
@@ -14,14 +12,12 @@ export const useFormSubmit = () => {
       Array.from(formData.entries()) as [string, string][]
     ).toString();
 
-    console.log("🚀 ~ body:", body);
-
     try {
-      // await fetch("/", {
-      //   method: "POST",
-      //   headers: { "Content-Type": "application/x-www-form-urlencoded" },
-      //   body
-      // });
+      await fetch("/", {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body
+      });
 
       form.reset();
       enQueueToast("sucess", "Your message was sent successfully!");
