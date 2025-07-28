@@ -1,5 +1,17 @@
+.footer {
+  padding-top: 0;
+  padding-bottom: 0;
+}
+
 .copyright {
   text-align: end;
   margin-right: 2em;
   margin-bottom: 1em;
+  font-size: 0.8em;
+}
+
+@media screen and (max-width: 600px) {
+  .copyright {
+    font-size: 0.7em;
+  }
 }
