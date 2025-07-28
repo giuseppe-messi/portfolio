@@ -6,7 +6,7 @@ import inWhiteLogo from "../../assets/in-white.png";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 
 type SocialLinksProps = {
-  theme: "dark" | "light";
+  theme?: "dark" | "light";
 };
 
 const logoMap = {
