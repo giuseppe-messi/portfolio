@@ -1,0 +1,21 @@
+.socialSection {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.socialLinks {
+  display: flex;
+  justify-content: center;
+  gap: 2.5rem;
+  font-size: 2.5rem;
+  margin-top: 0.7em;
+}
+
+.socialLink {
+  display: inline-block;
+  opacity: 0.8;
+}
+
+.socialLink > img {
+  width: 50px;
+}

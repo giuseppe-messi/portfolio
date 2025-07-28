@@ -1,8 +1,4 @@
-.logo {
-  font-size: 1.3em;
-}
-
-.mobileNav {
+.nav {
   display: flex;
   flex-direction: column;
   background: white;
@@ -13,31 +9,34 @@
   padding: 1em;
   padding-top: 1em;
   font-weight: 900;
-  font-size: 1.2em;
   z-index: 1;
 }
 
-.mobileNav a {
+.open {
+  height: 100vh;
+  overflow-x: auto;
+}
+
+.nav a {
   all: unset;
   cursor: pointer;
   color: var(--color-primary);
 }
 
-.mobileNav .logoHeader {
+.nav .logoHeader {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
 
-.mobileNav ul {
+.nav ul {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 2em;
-  font-size: 1.2em;
+  gap: 3.5em;
+  font-size: 2em;
   margin-top: 2em;
-  height: 100vh;
 }
 
 .closeIcon,
@@ -46,9 +45,10 @@
 }
 
 .closeIcon {
-  font-size: 2em;
+  font-size: 2.3em;
   background: none;
   border: none;
+  font-weight: 700;
 }
 
 .hamburger {
@@ -69,4 +69,27 @@
   height: 7px;
   background: var(--color-primary);
   border-radius: 2px;
+}
+
+.closedNavBox {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navSocialsBox {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+.socialLinksBox h2 {
+  font-weight: 400;
+}
+
+@media (max-height: 730px) {
+  .nav ul {
+    gap: 1.5em;
+  }
 }

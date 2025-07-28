@@ -58,6 +58,7 @@ export const About = () => {
               onMouseEnter={() => setMagnify(true)}
               onMouseLeave={() => setMagnify(false)}
               target="_blank"
+              rel="noopener noreferrer"
             >
               <strong>my GitHub page</strong>
             </a>
