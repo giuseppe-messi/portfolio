@@ -11,9 +11,22 @@ import {
 import { loadSlim } from "@tsparticles/slim"; // if you are going to use `loadSlim`, install the "@tsparticles/slim" package too.
 // import { loadBasic } from "@tsparticles/basic"; // if you are going to use `loadBasic`, install the "@tsparticles/basic" package too.
 import styles from "./ParticlesBackground.module.css";
+import { useTheme, type ITheme } from "../../contexts/ThemeContext";
+
+const themeStyle: Record<ITheme, Record<"background" | "particles", string>> = {
+  dark: {
+    background: "#0c0c0c",
+    particles: "#ffffff"
+  },
+  light: {
+    background: "#ffffff",
+    particles: "#0c0c0c"
+  }
+};
 
 export const ParticlesBackground = () => {
   const [init, setInit] = useState(false);
+  const theme = useTheme();
 
   // this should be run only once per application lifetime
   useEffect(() => {
@@ -38,7 +51,7 @@ export const ParticlesBackground = () => {
     () => ({
       background: {
         color: {
-          value: "#ffffff"
+          value: themeStyle[theme].background
         }
       },
       fullScreen: { enable: true },
@@ -46,10 +59,10 @@ export const ParticlesBackground = () => {
       fpsLimit: 120,
       particles: {
         color: {
-          value: "#000000"
+          value: themeStyle[theme].particles
         },
         links: {
-          color: "#000000",
+          color: themeStyle[theme].particles,
           distance: 150,
           enable: true,
           opacity: 0.5,
@@ -88,7 +101,7 @@ export const ParticlesBackground = () => {
       },
       detectRetina: true
     }),
-    []
+    [theme]
   );
 
   if (init) {

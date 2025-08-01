@@ -4,6 +4,8 @@ import { useCursorMagnify } from "../../stores/useCursorMagnify";
 import { GmLogo } from "../GmLogo/GmLogo";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import clsx from "clsx";
+import { useTheme } from "../../contexts/ThemeContext";
+import { ThemeToggleIcon } from "../ThemeToggleIcon/ThemeToggleIcon";
 
 type NavItem = {
   label: string;
@@ -19,9 +21,10 @@ const navItems: NavItem[] = [
 export const Nav = () => {
   const [show, setShow] = useState(false);
   const { magnify, setMagnify } = useCursorMagnify();
+  const theme = useTheme();
   const navRef = useRef(null);
 
-  const handleToggle = useCallback(() => {
+  const handleToggleNav = useCallback(() => {
     setShow((s) => !s);
     setMagnify(!magnify);
   }, [magnify, setMagnify]);
@@ -35,17 +38,20 @@ export const Nav = () => {
   );
 
   return (
-    <nav ref={navRef} className={clsx(styles.nav, show && styles.open)}>
+    <nav
+      ref={navRef}
+      className={clsx(styles.nav, show && styles.open, styles[`${theme}-nav`])}
+    >
       {show && (
         <>
           <div className={styles.logoHeader}>
-            <a href="#header" onClick={handleToggle} {...magnifyEvents}>
+            <a href="#header" onClick={handleToggleNav} {...magnifyEvents}>
               <GmLogo />
             </a>
 
             <button
               className={styles.closeIcon}
-              onClick={handleToggle}
+              onClick={handleToggleNav}
               {...magnifyEvents}
             >
               &times;
@@ -55,7 +61,7 @@ export const Nav = () => {
             <ul>
               {navItems.map((i) => (
                 <li key={i.label}>
-                  <a href={i.link} onClick={handleToggle} {...magnifyEvents}>
+                  <a href={i.link} onClick={handleToggleNav} {...magnifyEvents}>
                     {i.label}
                   </a>
                 </li>
@@ -74,7 +80,7 @@ export const Nav = () => {
           </a>
           <button
             className={styles.hamburger}
-            onClick={handleToggle}
+            onClick={handleToggleNav}
             {...magnifyEvents}
             aria-label="Menu"
           >
@@ -82,6 +88,8 @@ export const Nav = () => {
             <span></span>
             <span></span>
           </button>
+
+          <ThemeToggleIcon className={styles.themeIcon} />
         </div>
       )}
     </nav>

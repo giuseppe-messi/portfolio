@@ -9,7 +9,7 @@
 :root {
   font-family: "Poppins", system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
-  background-color: #242424;
+  background-color: #0c0c0c;
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
@@ -23,9 +23,9 @@
   --space-xl: 32px;
 
   /* colors */
-  --color-primary: #242424;
+  --color-primary: #0c0c0c;
   --color-secondary: #468faf;
-  --color-light-white: #f8f8ff;
+  --text-color-light: #f8f8ff;
   --color-light-red: #e15151;
   --color-light-green: #8dd765;
   --color-light-yellow: #e1c051;
@@ -45,6 +45,14 @@
 
   /* input focus */
   --input-focus: #0070f3;
+
+  /* black / white sections */
+
+  --white-section-bg: transparent;
+  --white-section-text: var(--color-primary);
+
+  --black-section-bg: var(--color-primary);
+  --black-section-text: white;
 }
 
 html {
@@ -54,7 +62,7 @@ html {
 }
 
 a {
-  color: var(--color-light-white);
+  color: var(--text-color-light);
   text-decoration: inherit;
 }
 
@@ -83,27 +91,6 @@ ul {
   margin-left: 0;
 }
 
-/* button {
-  border-radius: var(--app-radius);
-  border: 1px solid transparent;
-  padding: 0.3em 1.2em;
-  font-size: 1em;
-  font-weight: 500;
-  font-family: inherit;
-  background-color: #1a1a1a;
-  cursor: pointer;
-  transition: border-color 0.25s;
-}
-
-button:hover {
-  border-color: #646cff;
-}
-
-button:focus,
-button:focus-visible {
-  outline: 4px auto -webkit-focus-ring-color;
-} */
-
 .section {
   font-size: 1.2em;
   font-weight: 100;
@@ -113,13 +100,14 @@ button:focus-visible {
 }
 
 .section.whiteSection {
-  color: var(--color-primary);
+  color: var(--white-section-text);
+  background: var(--white-section-bg);
   font-weight: 400;
 }
 
 .section.blackSection {
-  background: var(--color-primary);
-  color: white;
+  color: var(--black-section-text);
+  background: var(--black-section-bg);
 }
 
 .sectionBox {
@@ -129,13 +117,36 @@ button:focus-visible {
   text-align: justify;
 }
 
-.sectionBox.blackSection {
-  background: var(--color-primary);
-  color: white;
-}
-
 @media screen and (max-width: 600px) {
   .sectionBox {
     padding: 1em;
   }
+}
+
+/* on dark theme */
+
+[data-theme="dark"] {
+  --color-primary: #f8f8ff;
+  --color-secondary: #0c0c0c;
+  --text-color-light: #f1f1f1;
+}
+
+[data-theme="dark"] .section.whiteSection {
+  color: var(--black-section-text);
+  background: transparent;
+  font-weight: 100;
+}
+
+[data-theme="dark"] .section.whiteSection strong {
+  font-weight: 300;
+}
+
+[data-theme="dark"] .section.blackSection {
+  color: var(--color-secondary);
+  background: var(--color-primary);
+  font-weight: 400;
+}
+
+[data-theme="dark"] .section.blackSection strong {
+  font-weight: 500;
 }
