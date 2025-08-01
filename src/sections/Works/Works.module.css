@@ -1,4 +1,8 @@
-.contentBox {
+.dark-box {
+  background: #000000ab;
+}
+
+.light-box {
   background: #ffffffab;
 }
 

@@ -1,9 +1,11 @@
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
+import { useTheme } from "../../contexts/ThemeContext";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 import styles from "./Works.module.css";
 
 export const Works = () => {
   const { setMagnify } = useCursorMagnify();
+  const theme = useTheme();
 
   return (
     <section id="works" className="section whiteSection">
@@ -12,7 +14,7 @@ export const Works = () => {
           <AnimatedText text="Works" />
         </h2>
 
-        <div className={styles.contentBox}>
+        <div className={styles[`${theme}-box`]}>
           <p>
             Most of my open-source code is structured inside a single monorepo
             named:{" "}
