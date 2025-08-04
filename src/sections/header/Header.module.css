@@ -50,15 +50,11 @@
   width: 100%;
 }
 
-.headingParagraph {
-  text-align: justify;
-  font-weight: 400;
-  font-size: 1.2em;
-}
-
 @media screen and (max-width: 600px) {
   .headingWrap h1 {
     font-size: 1.8em;
+    display: block;
+    margin-bottom: 1em;
   }
   .header {
     padding: 0 2em;
