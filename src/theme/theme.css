@@ -24,7 +24,7 @@
 
   /* colors */
   --color-primary: #0c0c0c;
-  --color-secondary: #468faf;
+  --color-secondary: #2f87c7a8;
   --text-color-light: #f8f8ff;
   --color-light-red: #e15151;
   --color-light-green: #8dd765;
@@ -58,7 +58,7 @@
 html {
   scroll-behavior: smooth;
   width: 100%;
-  color: var(--color-primary);
+  color: var(--text-color-light);
 }
 
 a {
@@ -99,15 +99,15 @@ ul {
   padding-top: 1em;
 }
 
-.section.whiteSection {
-  color: var(--white-section-text);
-  background: var(--white-section-bg);
+.section.lightSection {
+  color: var(--color-primary);
+  background: var(--text-color-light);
   font-weight: 400;
 }
 
-.section.blackSection {
-  color: var(--black-section-text);
-  background: var(--black-section-bg);
+.section.darkSection {
+  color: var(--text-color-light);
+  background: var(--color-secondary);
 }
 
 .sectionBox {
@@ -125,7 +125,7 @@ ul {
 
 /* on dark theme */
 
-[data-theme="dark"] {
+/* [data-theme="dark"] {
   --color-primary: #f8f8ff;
   --color-secondary: #0c0c0c;
   --text-color-light: #f1f1f1;
@@ -149,4 +149,4 @@ ul {
 
 [data-theme="dark"] .section.blackSection strong {
   font-weight: 500;
-}
+} */

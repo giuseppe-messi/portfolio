@@ -26,7 +26,7 @@ export const SayHi = () => (
       <rect
         width="100%"
         height="100%"
-        fill="var(--color-primary)"
+        fill="var(--text-color-light)"
         mask="url(#cutout-text)"
       />
     </svg>

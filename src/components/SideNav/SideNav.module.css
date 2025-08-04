@@ -3,7 +3,10 @@
   height: 60px;
 }
 
-.nav {
+.nav.open {
+  height: 100vh;
+  overflow-x: auto;
+  background-color: #0c0c0c; /* not caring of theme, always this color */
   display: flex;
   flex-direction: column;
   position: fixed;
@@ -14,12 +17,6 @@
   padding-top: 1em;
   font-weight: 600;
   z-index: 1;
-}
-
-.nav.open {
-  height: 100vh;
-  overflow-x: auto;
-  background-color: #0c0c0c; /* not caring of theme, always this color */
 }
 .nav.open a,
 .nav.open button,
@@ -85,36 +82,9 @@
   background: var(--text-color-light);
 }
 
-[data-theme="dark"] .hamburger span {
-  background: var(--color-primary);
-}
-
-.closedNavBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
-}
-
 .navSocialsBox {
   display: flex;
   flex-direction: column;
   height: 100vh;
   justify-content: space-between;
-}
-
-.socialLinksBox h2 {
-  font-weight: 400;
-}
-
-.themeIcon {
-  top: 70px;
-  right: -6px;
-  cursor: pointer;
-}
-
-@media (max-height: 730px) {
-  .nav ul {
-    gap: 1.5em;
-  }
 }
