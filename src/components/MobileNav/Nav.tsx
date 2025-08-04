@@ -4,8 +4,8 @@ import { useCursorMagnify } from "../../stores/useCursorMagnify";
 import { GmLogo } from "../GmLogo/GmLogo";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import clsx from "clsx";
-import { useTheme } from "../../contexts/ThemeContext";
 import { ThemeToggleIcon } from "../ThemeToggleIcon/ThemeToggleIcon";
+import { CircleBlackBox } from "../CircleBlackBox/CircleBlackBox";
 
 type NavItem = {
   label: string;
@@ -21,7 +21,6 @@ const navItems: NavItem[] = [
 export const Nav = () => {
   const [show, setShow] = useState(false);
   const { magnify, setMagnify } = useCursorMagnify();
-  const theme = useTheme();
   const navRef = useRef(null);
 
   const handleToggleNav = useCallback(() => {
@@ -38,10 +37,7 @@ export const Nav = () => {
   );
 
   return (
-    <nav
-      ref={navRef}
-      className={clsx(styles.nav, show && styles.open, styles[`${theme}-nav`])}
-    >
+    <nav ref={navRef} className={clsx(styles.nav, show && styles.open)}>
       {show && (
         <>
           <div className={styles.logoHeader}>
@@ -76,18 +72,22 @@ export const Nav = () => {
       {!show && (
         <div className={styles.closedNavBox}>
           <a href="#header" onClick={() => setShow(false)} {...magnifyEvents}>
-            <GmLogo />
+            <CircleBlackBox className={styles.logoBox}>
+              <GmLogo />
+            </CircleBlackBox>
           </a>
-          <button
-            className={styles.hamburger}
-            onClick={handleToggleNav}
-            {...magnifyEvents}
-            aria-label="Menu"
-          >
-            <span></span>
-            <span></span>
-            <span></span>
-          </button>
+          <CircleBlackBox className={styles.hamburgerBox}>
+            <button
+              className={styles.hamburger}
+              onClick={handleToggleNav}
+              {...magnifyEvents}
+              aria-label="Menu"
+            >
+              <span></span>
+              <span></span>
+              <span></span>
+            </button>
+          </CircleBlackBox>
 
           <ThemeToggleIcon className={styles.themeIcon} />
         </div>

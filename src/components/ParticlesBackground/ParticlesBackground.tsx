@@ -16,10 +16,10 @@ import { useTheme, type ITheme } from "../../contexts/ThemeContext";
 const themeStyle: Record<ITheme, Record<"background" | "particles", string>> = {
   dark: {
     background: "#0c0c0c",
-    particles: "#ffffff"
+    particles: "#f8f8ff"
   },
   light: {
-    background: "#ffffff",
+    background: "#f8f8ff",
     particles: "#0c0c0c"
   }
 };
