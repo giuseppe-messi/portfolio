@@ -1,7 +1,11 @@
+.closedNavBox .logoBox {
+  width: 60px;
+  height: 60px;
+}
+
 .nav {
   display: flex;
   flex-direction: column;
-  background: white;
   position: fixed;
   top: 0;
   left: 0;
@@ -10,15 +14,6 @@
   padding-top: 1em;
   font-weight: 600;
   z-index: 1;
-  background: var(--color-secondary);
-}
-
-.dark-nav {
-  background: var(--color-secondary);
-}
-
-.light-nav {
-  background: var(--text-color-light);
 }
 
 .nav.open {
@@ -66,12 +61,17 @@
   font-weight: 700;
 }
 
+.hamburgerBox {
+  top: 0;
+  right: -6px;
+}
+
 .hamburger {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  width: 30px;
-  height: 30px;
+  width: 22px;
+  height: 20px;
   padding: 0;
   border: none;
   background: transparent;
@@ -80,9 +80,13 @@
 
 .hamburger span {
   display: block;
-  height: 7px;
-  background: var(--color-primary);
+  height: 4px;
   border-radius: 2px;
+  background: var(--text-color-light);
+}
+
+[data-theme="dark"] .hamburger span {
+  background: var(--color-primary);
 }
 
 .closedNavBox {
@@ -104,7 +108,6 @@
 }
 
 .themeIcon {
-  position: absolute;
   top: 70px;
   right: -6px;
   cursor: pointer;

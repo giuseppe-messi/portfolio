@@ -53,9 +53,3 @@
   animation-timing-function: ease-out;
   animation-iteration-count: 1;
 }
-
-@media screen and (max-width: 500px) {
-  .wrapper {
-    font-size: 1.5em;
-  }
-}

@@ -2,8 +2,7 @@ import { useTheme, useSetTheme } from "../../contexts/ThemeContext";
 import { SunIcon } from "../Icons/SunIcon";
 import { MoonIcon } from "../Icons/MoonIcon";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
-import styles from "./ThemeToggleIcon.module.css";
-import clsx from "clsx";
+import { CircleBlackBox } from "../CircleBlackBox/CircleBlackBox";
 type Props = {
   className: string;
 };
@@ -19,13 +18,13 @@ export const ThemeToggleIcon = ({ className }: Props) => {
   const Icon = theme === "dark" ? SunIcon : MoonIcon;
 
   return (
-    <div className={clsx(className, styles.box)}>
+    <CircleBlackBox className={className}>
       <Icon
         aria-hidden="true"
         onClick={handleToggle}
         onMouseEnter={() => setMagnify(true)}
         onMouseLeave={() => setMagnify(false)}
       />
-    </div>
+    </CircleBlackBox>
   );
 };
