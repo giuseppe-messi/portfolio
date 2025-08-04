@@ -1,12 +1,16 @@
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import styles from "./AnimatedText.module.css";
 import clsx from "clsx";
 
 interface AnimatedHeadingProps {
   text: string;
+  fontSize?: CSSProperties["fontSize"];
 }
 
-export const AnimatedText = ({ text }: AnimatedHeadingProps) => {
+export const AnimatedText = ({
+  text,
+  fontSize = "2em"
+}: AnimatedHeadingProps) => {
   const [letters, setLetters] = useState<boolean[]>(
     Array(text.length).fill(false)
   );
@@ -42,7 +46,10 @@ export const AnimatedText = ({ text }: AnimatedHeadingProps) => {
 
   return (
     <>
-      <span className={styles.wrapper}>
+      <span
+        style={{ "--fontSize": fontSize } as React.CSSProperties}
+        className={styles.wrapper}
+      >
         {text.split("").map((letter, index) => {
           const delay = (index + 1) * 180;
 

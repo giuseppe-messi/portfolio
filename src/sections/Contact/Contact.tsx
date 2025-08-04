@@ -7,7 +7,9 @@ export const Contact = () => {
 
   return (
     <section id="contact" className={styles.contact}>
-      <SayHi />
+      <div className={styles.sayHiBox}>
+        <SayHi />
+      </div>
       <div className={styles.box}>
         <div></div>
 
