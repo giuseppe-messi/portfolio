@@ -1,0 +1,101 @@
+.closedNavBox .logoBox {
+  width: 60px;
+  height: 60px;
+}
+
+.nav {
+  display: none;
+  background-color: var(--color-primary);
+  flex-direction: column;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  padding: var(--space-md);
+  padding-top: var(--space-md);
+  font-weight: 600;
+  z-index: 1;
+}
+
+.nav.open {
+  height: 100vh;
+  background: linear-gradient(160deg, #24628fb0 0%, #184e859c 100%);
+  overflow-x: auto;
+}
+.nav.open a,
+.nav.open button,
+.nav.open h2 {
+  color: var(--white);
+}
+
+.nav a {
+  all: unset;
+  cursor: pointer;
+  color: var(--color-primary);
+}
+
+.nav .logoHeader {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nav ul {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3.5em;
+  font-size: 1.6rem;
+  margin-top: var(--space-xl);
+}
+
+.closeIcon,
+.hamburger {
+  cursor: pointer;
+}
+
+.closeIcon {
+  font-size: 2.3em;
+  background: none;
+  border: none;
+  font-weight: 700;
+}
+
+.hamburgerBox {
+  top: 0;
+  right: -6px;
+}
+
+.hamburger {
+  display: flex;
+  flex-direction: column;
+  align-self: end;
+  justify-content: space-between;
+  width: 22px;
+  height: 20px;
+  padding: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+.hamburger span {
+  display: block;
+  height: 4px;
+  border-radius: 2px;
+  background: var(--white);
+}
+
+.navSocialsBox {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  justify-content: space-between;
+}
+
+@media screen and (max-width: 550px) {
+  .nav {
+    display: flex;
+  }
+}

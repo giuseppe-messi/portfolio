@@ -7,7 +7,7 @@
 .copyright {
   text-align: end;
   margin-right: 2em;
-  margin-bottom: 1em;
+  margin-bottom: var(--space-md);
   font-size: 0.8em;
 }
 

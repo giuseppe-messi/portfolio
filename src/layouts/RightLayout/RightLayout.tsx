@@ -1,3 +1,3 @@
-import { Nav } from "../../components/Nav/Nav";
+import { SideNav } from "../../components/SideNav/SideNav";
 
-export const RightLayout = () => <Nav />;
+export const RightLayout = () => <SideNav />;

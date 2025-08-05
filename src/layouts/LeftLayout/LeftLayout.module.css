@@ -8,6 +8,10 @@
   justify-content: center;
 }
 
+.hide {
+  visibility: hidden;
+}
+
 @media (max-width: 700px) {
   .logoBox {
     width: 30px;

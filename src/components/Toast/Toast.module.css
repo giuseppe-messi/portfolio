@@ -15,7 +15,7 @@
 
 .error {
   background-color: var(--color-light-red);
-  color: var(--text-color-light);
+  color: var(--white);
 }
 
 .warning {

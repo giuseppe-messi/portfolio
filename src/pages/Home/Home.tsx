@@ -10,32 +10,41 @@ import { About } from "../../sections/About/About";
 import { Works } from "../../sections/Works/Works";
 import { Contact } from "../../sections/Contact/Contact";
 import { Footer } from "../../sections/Footer/Footer";
+import { MobileNav } from "../../components/MobileNav/MobileNav";
+import { useShowNav } from "../../stores/useShowNav";
+import clsx from "clsx";
 
-const Home: React.FC = () => (
-  <>
-    <CustomCursor />
+const Home: React.FC = () => {
+  const { show } = useShowNav();
 
-    <div className={styles.layout}>
-      <div className={styles.leftSide}>
-        <LeftLayout />
+  return (
+    <>
+      <CustomCursor />
+
+      <div className={styles.layout}>
+        <div className={styles.leftSide}>
+          <LeftLayout />
+        </div>
+
+        <MobileNav />
+
+        <main className={clsx(styles.main, show && styles.hideMain)}>
+          <Header />
+          <About />
+          <Works />
+          <Contact />
+          <Footer />
+        </main>
+
+        <div className={styles.righttSide}>
+          <RightLayout />
+        </div>
       </div>
 
-      <main className={styles.main}>
-        <Header />
-        <About />
-        <Works />
-        <Contact />
-        <Footer />
-      </main>
-
-      <div className={styles.righttSide}>
-        <RightLayout />
-      </div>
-    </div>
-
-    <ParticlesBackground />
-    <Toaster />
-  </>
-);
+      <ParticlesBackground />
+      <Toaster />
+    </>
+  );
+};
 
 export default Home;

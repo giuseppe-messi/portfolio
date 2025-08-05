@@ -1,37 +1,24 @@
 import clsx from "clsx";
 import { GmLogo } from "../GmLogo/GmLogo";
-import type { NavItem } from "../Nav/Nav";
 import { SocialLinks } from "../SocialLinks/SocialLinks";
 import styles from "./MobileNav.module.css";
+import { useNav } from "../../hooks/useNav";
 
-type MobileNavProps = {
-  items: NavItem[];
-  show: boolean;
-  onToggleNav: () => void;
-  magnifyEvents: {
-    onMouseEnter: () => void;
-    onMouseLeave: () => void;
-  };
-};
+export const MobileNav = () => {
+  const { navItems, show, handleToggleNav, magnifyEvents } = useNav();
 
-export const MobileNav = ({
-  items,
-  show,
-  onToggleNav,
-  magnifyEvents
-}: MobileNavProps) => {
   return (
     <nav className={clsx(styles.nav, show && styles.open)}>
       {show && (
         <>
           <div className={styles.logoHeader}>
-            <a href="#header" onClick={onToggleNav} {...magnifyEvents}>
+            <a href="#header" onClick={handleToggleNav} {...magnifyEvents}>
               <GmLogo />
             </a>
 
             <button
               className={styles.closeIcon}
-              onClick={onToggleNav}
+              onClick={handleToggleNav}
               {...magnifyEvents}
             >
               &times;
@@ -39,9 +26,9 @@ export const MobileNav = ({
           </div>
           <div className={styles.navSocialsBox}>
             <ul>
-              {items.map((i) => (
+              {navItems.map((i) => (
                 <li key={i.label}>
-                  <a href={i.link} onClick={onToggleNav} {...magnifyEvents}>
+                  <a href={i.link} onClick={handleToggleNav} {...magnifyEvents}>
                     {i.label}
                   </a>
                 </li>
@@ -57,7 +44,7 @@ export const MobileNav = ({
       {!show && (
         <button
           className={styles.hamburger}
-          onClick={onToggleNav}
+          onClick={handleToggleNav}
           {...magnifyEvents}
           aria-label="Menu"
         >

@@ -4,7 +4,7 @@ import styles from "./Footer.module.css";
 
 export const Footer = () => {
   return (
-    <section id="about" className={clsx("section darkSection", styles.footer)}>
+    <section className={clsx("section darkSection", styles.footer)}>
       <div className="sectionBox">
         <SocialLinks theme="light" />
       </div>

@@ -3,9 +3,10 @@ import { useShowNav } from "../../stores/useShowNav";
 import styles from "./LeftLayout.module.css";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 import { GmLogo } from "../../components/GmLogo/GmLogo";
+import clsx from "clsx";
 
 export const LeftLayout = () => {
-  const { setShow } = useShowNav();
+  const { show, setShow } = useShowNav();
   const { setMagnify } = useCursorMagnify();
 
   const magnifyEvents = useMemo(
@@ -17,7 +18,12 @@ export const LeftLayout = () => {
   );
 
   return (
-    <a href="#header" onClick={() => setShow(false)} {...magnifyEvents}>
+    <a
+      href="#header"
+      onClick={() => setShow(false)}
+      {...magnifyEvents}
+      className={clsx(show && styles.hide)}
+    >
       <div className={styles.logoBox}>
         <GmLogo />
       </div>

@@ -39,7 +39,7 @@ export const SocialLinks = ({ theme = "light" }: SocialLinksProps) => {
 
   return (
     <section className={styles.socialSection}>
-      <h2>Let's connect!</h2>
+      <h3>Let's connect!</h3>
       <div className={styles.socialLinks}>
         {links.map(({ icon, url, label }) => (
           <a
