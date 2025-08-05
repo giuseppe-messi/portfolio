@@ -62,7 +62,7 @@
   display: flex;
   gap: 1rem;
   justify-content: flex-end;
-  margin-top: 1rem;
+  margin-top: var(--space-md);
 }
 
 .formActions button {
@@ -96,6 +96,12 @@
   background: #444;
 }
 
+@media screen and (max-width: 1000px) {
+  .contact {
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 100%);
+  }
+}
+
 @media screen and (max-width: 700px) {
   .sayHiBox {
     display: none;
@@ -114,6 +120,10 @@
 @media screen and (max-width: 500px) {
   .contactForm {
     min-width: 350px;
+  }
+
+  .contact {
+    clip-path: polygon(0 1%, 100% 0, 100% 98%, 0 100%);
   }
 }
 
