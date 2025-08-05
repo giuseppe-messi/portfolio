@@ -1,16 +1,22 @@
 .aboutSection {
   clip-path: polygon(0 0, 100% 5%, 100% 95%, 0 100%);
-  padding-top: 2.2em;
+  padding-top: var(--space-lg);
 }
 
 .aboutBox {
   display: flex;
   gap: 2em;
-  margin-top: 1.4em;
+  margin-top: var(--space-lg);
 }
 
 .aboutBox > div {
   flex: 1;
+}
+
+@media screen and (max-width: 1000px) {
+  .aboutSection {
+    clip-path: polygon(0 0, 100% 2%, 100% 98%, 0 100%);
+  }
 }
 
 @media screen and (max-width: 800px) {
@@ -21,6 +27,10 @@
 
 @media screen and (max-width: 500px) {
   .aboutSection {
-    padding-top: 3.5em;
+    padding-top: calc(var(--space-xl) * 1.9);
+  }
+
+  .aboutSection {
+    clip-path: polygon(0 0, 100% 1%, 100% 98%, 0 100%);
   }
 }

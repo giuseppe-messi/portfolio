@@ -2,11 +2,12 @@
   padding-top: 0;
   padding-bottom: 0;
   clip-path: polygon(0 5%, 100% 0, 100% 100%, 0 95%);
+  padding-bottom: var(--space-xs);
 }
 
 .copyright {
   text-align: end;
-  margin-right: 2em;
+  margin-right: var(--space-md);
   margin-bottom: var(--space-md);
   font-size: 0.8em;
 }

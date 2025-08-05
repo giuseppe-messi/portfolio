@@ -9,8 +9,8 @@ importers:
   .:
     dependencies:
       '@react-lab-mono/ui':
-        specifier: ^2.0.0
-        version: 2.0.0(@types/react@19.1.8)(react@19.1.0)
+        specifier: ^2.3.0
+        version: 2.3.0(@types/react@19.1.8)(react@19.1.0)
       '@tsparticles/engine':
         specifier: ^3.8.1
         version: 3.8.1
@@ -683,8 +683,8 @@ packages:
     resolution: {integrity: sha512-QNqXyfVS2wm9hweSYD2O7F0G06uurj9kZ96TRQE5Y9hU7+tgdZwIkbAKc5Ocy1HxEY2kuDQa6cQ1WRs/O5LFKA==}
     engines: {node: ^12.20.0 || ^14.18.0 || >=16.0.0}
 
-  '@react-lab-mono/ui@2.0.0':
-    resolution: {integrity: sha512-rrq4XjZNAGP2fElatY19bO/to/ViB64VACDtzY3fHvyojTcAWLMwi/TXETtx/8of5edsVQNNYty7KzMjrS4LGA==}
+  '@react-lab-mono/ui@2.3.0':
+    resolution: {integrity: sha512-HbE7aiDQ45DSD7vc6VznuwDTGFaQI0gPZc1ayljv00RhR2dMI8+hdr2eFrgo26HVVVrWRgE2BZe5Q3KEC7Eh7w==}
     peerDependencies:
       react: ^19.1.0
 
@@ -3757,7 +3757,7 @@ snapshots:
 
   '@pkgr/core@0.2.9': {}
 
-  '@react-lab-mono/ui@2.0.0(@types/react@19.1.8)(react@19.1.0)':
+  '@react-lab-mono/ui@2.3.0(@types/react@19.1.8)(react@19.1.0)':
     dependencies:
       clsx: 2.1.1
       react: 19.1.0

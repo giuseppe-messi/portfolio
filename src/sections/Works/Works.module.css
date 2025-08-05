@@ -5,7 +5,7 @@
 .box {
   display: flex;
   gap: 2em;
-  margin-top: 1.4em;
+  margin-top: var(--space-lg);
 }
 
 .box > div {
@@ -24,8 +24,24 @@
   font-weight: 500;
 }
 
+@media screen and (max-width: 1000px) {
+  .worksSection {
+    clip-path: polygon(0 2%, 100% 0, 100% 98%, 0 95%);
+  }
+}
+
 @media screen and (max-width: 800px) {
   .box {
     display: block;
+  }
+
+  .worksSection {
+    padding-bottom: calc(var(--space-xl) * 3);
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .worksSection {
+    clip-path: polygon(0 1%, 100% 0, 100% 96%, 0 95%);
   }
 }
