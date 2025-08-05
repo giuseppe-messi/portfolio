@@ -8,9 +8,12 @@ module.exports = {
   // automatically include your RTL + axe setup
   setupFilesAfterEnv: [require.resolve(path.join(__dirname, "jest.setup.ts"))],
 
-  // stub out CSS modules
   moduleNameMapper: {
-    "\\.module\\.css$": "identity-obj-proxy"
+    // stub out CSS modules
+    "\\.module\\.css$": "identity-obj-proxy",
+
+    // stub out all other static assets (.css, images, fonts, etc.)
+    "\\.(png|jpe?g|gif|svg?)$": "<rootDir>/__mocks__/assetFileStub.js"
   },
 
   // point ts-jest at tsconfig.test.json instead of default tsconfig.json,

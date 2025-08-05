@@ -38,16 +38,16 @@ export const SocialLinks = ({ theme = "light" }: SocialLinksProps) => {
   ];
 
   return (
-    <section className={styles.socialSection}>
+    <section className={styles.socialSection} aria-label="Social links">
       <h3>Let's connect!</h3>
-      <div className={styles.socialLinks}>
+      <nav className={styles.socialLinks}>
         {links.map(({ icon, url, label }) => (
           <a
             key={url}
             href={url}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label={label}
+            aria-label={`${label} (opens in a new tab)`}
             className={styles.socialLink}
             onMouseEnter={() => setMagnify(true)}
             onMouseLeave={() => setMagnify(false)}
@@ -55,7 +55,7 @@ export const SocialLinks = ({ theme = "light" }: SocialLinksProps) => {
             {icon}
           </a>
         ))}
-      </div>
+      </nav>
     </section>
   );
 };

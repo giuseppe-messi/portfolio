@@ -8,7 +8,10 @@ export const MobileNav = () => {
   const { navItems, show, handleToggleNav, magnifyEvents } = useNav();
 
   return (
-    <nav className={clsx(styles.nav, show && styles.open)}>
+    <nav
+      className={clsx(styles.nav, show && styles.open)}
+      aria-label="Mobile navigation"
+    >
       {show && (
         <>
           <div className={styles.logoHeader}>
@@ -20,6 +23,9 @@ export const MobileNav = () => {
               className={styles.closeIcon}
               onClick={handleToggleNav}
               {...magnifyEvents}
+              aria-expanded={show}
+              aria-label="Open menu"
+              aria-controls="mobile-menu"
             >
               &times;
             </button>
@@ -46,7 +52,8 @@ export const MobileNav = () => {
           className={styles.hamburger}
           onClick={handleToggleNav}
           {...magnifyEvents}
-          aria-label="Menu"
+          aria-label="Toggle menu"
+          aria-controls="toggle-menu"
         >
           <span></span>
           <span></span>

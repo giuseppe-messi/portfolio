@@ -1,5 +1,5 @@
+import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
 import { useFormSubmit } from "../../hooks/useFormSubmit";
-import { SayHi } from "../SayHi/SayHi";
 import styles from "./Contact.module.css";
 
 export const Contact = () => {
@@ -8,7 +8,9 @@ export const Contact = () => {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.sayHiBox}>
-        <SayHi />
+        <h2>
+          <AnimatedText text="Get in touch !" />
+        </h2>
       </div>
       <div className={styles.box}>
         <div></div>

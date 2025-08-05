@@ -1,7 +1,7 @@
 import { useEffect, useMemo, useState } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import {
-  type Container,
+  // type Container,
   type ISourceOptions,
   MoveDirection,
   OutMode
@@ -30,9 +30,9 @@ export const ParticlesBackground = () => {
     });
   }, []);
 
-  const particlesLoaded = async (container?: Container): Promise<void> => {
-    console.log(container);
-  };
+  // const particlesLoaded = async (container?: Container): Promise<void> => {
+  //   console.log(container);
+  // };
 
   const options: ISourceOptions = useMemo(
     () => ({
@@ -95,9 +95,10 @@ export const ParticlesBackground = () => {
     return (
       <Particles
         id="tsparticles"
-        particlesLoaded={particlesLoaded}
+        // particlesLoaded={particlesLoaded}
         options={options}
         className={styles.particles}
+        aria-hidden="true"
       />
     );
   }
