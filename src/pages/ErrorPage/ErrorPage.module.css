@@ -6,3 +6,17 @@
 .container > h2 {
   margin-bottom: var(--space-xl);
 }
+
+.container button {
+  all: unset;
+  padding: 0.6rem;
+  border-radius: 8px;
+  background: transparent;
+  border: 1px solid var(--white);
+  cursor: pointer;
+}
+
+.container button:hover {
+  background: var(--white);
+  color: var(--color-primary);
+}
