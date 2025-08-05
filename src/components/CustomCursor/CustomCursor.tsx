@@ -35,6 +35,7 @@ export const CustomCursor = () => {
     <div
       ref={cursorRef}
       className={clsx(styles.cursor, magnify && styles.magnify)}
+      aria-hidden="true"
     >
       <div />
     </div>

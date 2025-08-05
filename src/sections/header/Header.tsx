@@ -6,6 +6,7 @@ export const Header = () => {
   return (
     <header id="header" className={clsx("section", styles.header)}>
       <div className={styles.headingWrap}>
+        <div className={styles.blueWall} aria-hidden="true"></div>
         <h1>
           <AnimatedText text="Giuseppe" fontSize="3em" />
           <span className={styles.lastName}>Messina</span>

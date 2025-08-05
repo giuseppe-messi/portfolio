@@ -26,11 +26,23 @@
 
 .headingWrap {
   max-width: 29em;
+  position: relative;
+}
+
+.blueWall {
+  background: #2f87c778;
+  padding: 3em;
+  clip-path: polygon(0 0, 100% 20%, 100% 82%, 0 100%);
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
 }
 
 .headingWrap h1 {
   display: flex;
   flex-direction: column;
+  font-weight: 500;
 }
 
 .lastName {
@@ -43,6 +55,7 @@
   text-align: justify;
   text-align-last: justify;
   margin-bottom: var(--space-md);
+  font-weight: 300;
 }
 
 .headingWrap h2 > span {

@@ -2,4 +2,7 @@
   font-size: 1.6em;
   font-weight: 700;
   color: var(--white);
+  border-top: 8px solid #2f87c778;
+  margin-top: 1rem;
+  padding-left: 8px;
 }

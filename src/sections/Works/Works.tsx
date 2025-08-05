@@ -53,6 +53,9 @@ export const Works = () => {
                 href="https://github.com/giuseppe-messi/react-lab-mono"
                 onMouseEnter={() => setMagnify(true)}
                 onMouseLeave={() => setMagnify(false)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub page (opens in a new tab)"
               >
                 <strong>README</strong>
               </a>{" "}
@@ -95,6 +98,9 @@ export const Works = () => {
                 href="https://github.com/giuseppe-messi/giuseppe-messi"
                 onMouseEnter={() => setMagnify(true)}
                 onMouseLeave={() => setMagnify(false)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub page (opens in a new tab)"
               >
                 <strong>my GitHub</strong>
               </a>
@@ -110,6 +116,7 @@ export const Works = () => {
                 download
                 onMouseEnter={() => setMagnify(true)}
                 onMouseLeave={() => setMagnify(false)}
+                aria-label="CV download"
               >
                 <strong>download my CV</strong>
               </a>{" "}

@@ -22,13 +22,16 @@ const Home: React.FC = () => {
       <CustomCursor />
 
       <div className={styles.layout}>
-        <div className={styles.leftSide}>
+        <aside className={styles.leftSide}>
           <LeftLayout />
-        </div>
+        </aside>
 
         <MobileNav />
 
-        <main className={clsx(styles.main, show && styles.hideMain)}>
+        <main
+          className={clsx(styles.main, show && styles.hideMain)}
+          aria-hidden={show}
+        >
           <Header />
           <About />
           <Works />
@@ -36,9 +39,9 @@ const Home: React.FC = () => {
           <Footer />
         </main>
 
-        <div className={styles.righttSide}>
+        <aside className={styles.righttSide}>
           <RightLayout />
-        </div>
+        </aside>
       </div>
 
       <ParticlesBackground />

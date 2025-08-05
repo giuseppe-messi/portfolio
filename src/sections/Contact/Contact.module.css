@@ -4,6 +4,13 @@
   clip-path: polygon(0 5%, 100% 0, 100% 95%, 0 100%);
 }
 
+.sayHiBox {
+  background-color: var(--white);
+  padding: 2rem;
+  padding-top: 4rem;
+  color: var(--color-primary);
+}
+
 .box {
   display: flex;
   justify-content: center;

@@ -49,6 +49,7 @@ export const AnimatedText = ({
       <span
         style={{ "--fontSize": fontSize } as React.CSSProperties}
         className={styles.wrapper}
+        aria-hidden="true"
       >
         {text.split("").map((letter, index) => {
           const delay = (index + 1) * 180;
@@ -68,7 +69,6 @@ export const AnimatedText = ({
                   if (e.pointerType === "mouse") handleStart(index);
                 }}
                 onAnimationEnd={() => handleStop(index)}
-                aria-hidden="true" // purely decorative animation, for a11y
               >
                 {letter}
               </span>

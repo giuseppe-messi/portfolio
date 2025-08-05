@@ -69,6 +69,7 @@ export const About = () => {
                 onMouseLeave={() => setMagnify(false)}
                 target="_blank"
                 rel="noopener noreferrer"
+                aria-label="GitHub page (opens in a new tab)"
               >
                 <strong>my GitHub page</strong>
               </a>

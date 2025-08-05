@@ -8,18 +8,26 @@ export const SideNav = () => {
   const { navItems, show, handleToggleNav, magnifyEvents } = useNav();
 
   return (
-    <nav className={clsx(styles.nav, show && styles.open)}>
+    <nav
+      className={clsx(styles.nav, show && styles.open)}
+      aria-label="Desktop navigation"
+    >
       {show && (
         <>
           <div className={styles.logoHeader}>
-            <a href="#header" onClick={handleToggleNav} {...magnifyEvents}>
-              <GmLogo />
-            </a>
+            <div className={styles.logoBox}>
+              <a href="#header" onClick={handleToggleNav} {...magnifyEvents}>
+                <GmLogo />
+              </a>
+            </div>
 
             <button
               className={styles.closeIcon}
               onClick={handleToggleNav}
               {...magnifyEvents}
+              aria-expanded={show}
+              aria-label="Open menu"
+              aria-controls="desktop-menu"
             >
               &times;
             </button>
@@ -46,7 +54,8 @@ export const SideNav = () => {
           className={styles.hamburger}
           onClick={handleToggleNav}
           {...magnifyEvents}
-          aria-label="Menu"
+          aria-label="Toggle menu"
+          aria-controls="toggle-menu"
         >
           <span></span>
           <span></span>
