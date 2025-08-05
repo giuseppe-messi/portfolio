@@ -1,13 +1,13 @@
 export function SunIcon({
-  size = 28,
+  // size = 28,
   color = "currentColor",
   className = "",
   ...props
 }) {
   return (
     <svg
-      width={size}
-      height={size}
+      // width={size}
+      // height={size}
       viewBox="0 0 24 24"
       aria-label="Sun icon"
       className={className}

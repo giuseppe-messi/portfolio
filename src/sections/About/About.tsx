@@ -8,7 +8,7 @@ export const About = () => {
   return (
     <section
       id="about"
-      className={clsx("section blackSection", styles.aboutSection)}
+      className={clsx("section lightSection", styles.aboutSection)}
     >
       <div className="sectionBox">
         <h2>

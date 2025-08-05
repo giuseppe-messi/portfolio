@@ -4,27 +4,28 @@
 }
 
 .nav {
-  display: flex;
+  display: none;
+  background-color: var(--color-primary);
   flex-direction: column;
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
-  padding: 1em;
-  padding-top: 1em;
+  padding: var(--space-md);
+  padding-top: var(--space-md);
   font-weight: 600;
   z-index: 1;
 }
 
 .nav.open {
   height: 100vh;
+  background: linear-gradient(160deg, #24628fb0 0%, #184e859c 100%);
   overflow-x: auto;
-  background-color: #0c0c0c; /* not caring of theme, always this color */
 }
 .nav.open a,
 .nav.open button,
 .nav.open h2 {
-  color: var(--text-color-light);
+  color: var(--white);
 }
 
 .nav a {
@@ -45,8 +46,8 @@
   flex-direction: column;
   align-items: center;
   gap: 3.5em;
-  font-size: 2em;
-  margin-top: 2em;
+  font-size: 1.6rem;
+  margin-top: var(--space-xl);
 }
 
 .closeIcon,
@@ -69,6 +70,7 @@
 .hamburger {
   display: flex;
   flex-direction: column;
+  align-self: end;
   justify-content: space-between;
   width: 22px;
   height: 20px;
@@ -82,18 +84,7 @@
   display: block;
   height: 4px;
   border-radius: 2px;
-  background: var(--text-color-light);
-}
-
-[data-theme="dark"] .hamburger span {
-  background: var(--color-primary);
-}
-
-.closedNavBox {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: relative;
+  background: var(--white);
 }
 
 .navSocialsBox {
@@ -103,18 +94,8 @@
   justify-content: space-between;
 }
 
-.socialLinksBox h2 {
-  font-weight: 400;
-}
-
-.themeIcon {
-  top: 70px;
-  right: -6px;
-  cursor: pointer;
-}
-
-@media (max-height: 730px) {
-  .nav ul {
-    gap: 1.5em;
+@media screen and (max-width: 550px) {
+  .nav {
+    display: flex;
   }
 }

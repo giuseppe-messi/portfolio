@@ -1,21 +1,22 @@
 import clsx from "clsx";
 import { AnimatedText } from "../../components/AnimatedText/AnimatedText";
-import { useTheme } from "../../contexts/ThemeContext";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 import styles from "./Works.module.css";
 
 export const Works = () => {
   const { setMagnify } = useCursorMagnify();
-  const theme = useTheme();
 
   return (
-    <section id="works" className="section whiteSection">
+    <section
+      id="works"
+      className={clsx("section darkSection", styles.worksSection)}
+    >
       <div className="sectionBox">
         <h2>
           <AnimatedText text="Works" />
         </h2>
 
-        <div className={clsx(styles.box, styles[`${theme}-box`])}>
+        <div className={styles.box}>
           <div>
             <p>
               Most of my open-source code is structured inside a single monorepo
