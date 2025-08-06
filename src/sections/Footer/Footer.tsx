@@ -6,7 +6,7 @@ export const Footer = () => {
   return (
     <footer className={clsx("section darkSection", styles.footer)}>
       <div className="sectionBox">
-        <SocialLinks theme="light" />
+        <SocialLinks />
       </div>
       <p className={styles.copyright}>@ 2025 Giuseppe Messina</p>
     </footer>

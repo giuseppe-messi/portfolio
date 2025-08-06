@@ -41,7 +41,7 @@ export const MobileNav = () => {
               ))}
             </ul>
             <div className={styles.socialLinksBox}>
-              <SocialLinks theme="dark" />
+              <SocialLinks />
             </div>
           </div>
         </>

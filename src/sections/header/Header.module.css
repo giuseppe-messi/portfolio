@@ -81,6 +81,10 @@
   .header {
     padding: 0 var(--space-md);
   }
+
+  .blueWall {
+    clip-path: polygon(0 0, 80% 20%, 80% 57%, 0 75%);
+  }
 }
 
 @media screen and (max-width: 400px) {
@@ -92,5 +96,11 @@
     font-size: 1rem;
     text-align-last: auto;
     word-spacing: 0.5rem;
+  }
+
+  .blueWall {
+    clip-path: polygon(0 0, 80% 20%, 80% 57%, 0 58%);
+    padding: 2em;
+    top: 8px;
   }
 }
