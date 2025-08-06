@@ -40,8 +40,8 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .worksSection {
-    clip-path: polygon(0 1%, 100% 0, 100% 96%, 0 95%);
+    clip-path: none;
   }
 }
