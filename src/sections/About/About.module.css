@@ -25,12 +25,12 @@
   }
 }
 
-@media screen and (max-width: 500px) {
+@media screen and (max-width: 550px) {
   .aboutSection {
     padding-top: calc(var(--space-xl) * 1.9);
   }
 
   .aboutSection {
-    clip-path: polygon(0 0, 100% 1%, 100% 98%, 0 100%);
+    clip-path: none;
   }
 }
