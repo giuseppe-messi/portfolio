@@ -2,15 +2,12 @@ import { useCallback, useEffect, useState, type CSSProperties } from "react";
 import styles from "./AnimatedText.module.css";
 import clsx from "clsx";
 
-interface AnimatedHeadingProps {
+export type AnimatedTextProps = {
   text: string;
   fontSize?: CSSProperties["fontSize"];
-}
+};
 
-export const AnimatedText = ({
-  text,
-  fontSize = "2em"
-}: AnimatedHeadingProps) => {
+export const AnimatedText = ({ text, fontSize = "2em" }: AnimatedTextProps) => {
   const [letters, setLetters] = useState<boolean[]>(
     Array(text.length).fill(false)
   );
@@ -45,37 +42,32 @@ export const AnimatedText = ({
   }, [handleStart, text.length]);
 
   return (
-    <>
-      <span
-        style={{ "--fontSize": fontSize } as React.CSSProperties}
-        className={styles.wrapper}
-        aria-hidden="true"
-      >
-        {text.split("").map((letter, index) => {
-          const delay = (index + 1) * 180;
+    <span
+      style={{ "--fontSize": fontSize } as React.CSSProperties}
+      className={styles.wrapper}
+      aria-hidden="true"
+    >
+      {text.split("").map((letter, index) => {
+        const delay = (index + 1) * 180;
 
-          return (
+        return (
+          <span
+            key={index}
+            style={{ "--delay": `${delay}ms` } as React.CSSProperties}
+            className={styles.letterBox}
+          >
             <span
-              key={index}
-              style={{ "--delay": `${delay}ms` } as React.CSSProperties}
-              className={styles.letterBox}
+              className={clsx(styles.letter, letters[index] && styles.animate)}
+              onPointerEnter={(e) => {
+                if (e.pointerType === "mouse") handleStart(index);
+              }}
+              onAnimationEnd={() => handleStop(index)}
             >
-              <span
-                className={clsx(
-                  styles.letter,
-                  letters[index] && styles.animate
-                )}
-                onPointerEnter={(e) => {
-                  if (e.pointerType === "mouse") handleStart(index);
-                }}
-                onAnimationEnd={() => handleStop(index)}
-              >
-                {letter}
-              </span>
+              {letter}
             </span>
-          );
-        })}
-      </span>
-    </>
+          </span>
+        );
+      })}
+    </span>
   );
 };

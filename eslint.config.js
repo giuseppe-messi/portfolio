@@ -28,7 +28,9 @@ export default tseslint.config([
       globals: globals.browser
     },
     rules: {
-      ...allJsxA11yRules
+      ...allJsxA11yRules,
+
+      "react-refresh/only-export-components": "off"
     }
   }
 ]);
