@@ -20,20 +20,20 @@ module.exports = {
   // so  tests compile with the correct compiler options
   transform: {
     "^.+\\.(ts|tsx)$": ["ts-jest", { tsconfig: "tsconfig.test.json" }]
-  }
+  },
 
   // ← always collect coverage
-  // collectCoverage: true,
-  // coverageDirectory: "coverage",
-  // coverageReporters: ["text", "lcov"],
+  collectCoverage: true,
+  coverageDirectory: "coverage",
+  coverageReporters: ["text", "lcov"],
 
   // ← enforce at least 80% everywhere (adjust to taste)
-  // coverageThreshold: {
-  //   global: {
-  //     branches: 80,
-  //     functions: 80,
-  //     lines: 80,
-  //     statements: 80
-  //   }
-  // }
+  coverageThreshold: {
+    global: {
+      branches: 80,
+      functions: 80,
+      lines: 80,
+      statements: 80
+    }
+  }
 };

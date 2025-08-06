@@ -109,15 +109,6 @@
   }
 }
 
-@media screen and (max-width: 700px) {
-  .sayHiBox {
-    display: none;
-  }
-  .contactForm {
-    border-top: 100px solid var(--white);
-  }
-}
-
 @media screen and (max-width: 600px) {
   .contactForm {
     min-width: 450px;
@@ -127,6 +118,10 @@
 @media screen and (max-width: 550px) {
   .contact {
     clip-path: none;
+  }
+
+  .sayHiBox {
+    padding: 1rem;
   }
 }
 
