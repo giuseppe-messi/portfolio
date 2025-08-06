@@ -32,5 +32,6 @@
 
   .aboutSection {
     clip-path: none;
+    padding-top: var(--space-lg);
   }
 }
