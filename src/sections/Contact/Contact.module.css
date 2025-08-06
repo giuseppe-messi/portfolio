@@ -126,16 +126,10 @@
 
 @media screen and (max-width: 500px) {
   .contactForm {
-    min-width: 350px;
+    min-width: 340px;
   }
 
   .contact {
     clip-path: polygon(0 1%, 100% 0, 100% 98%, 0 100%);
-  }
-}
-
-@media screen and (max-width: 400px) {
-  .contactForm {
-    min-width: 300px;
   }
 }

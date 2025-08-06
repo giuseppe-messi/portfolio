@@ -6,25 +6,25 @@ import inWhiteLogo from "../../assets/in-white.png";
 import { useCursorMagnify } from "../../stores/useCursorMagnify";
 
 type SocialLinksProps = {
-  theme?: "dark" | "light";
+  style?: "dark" | "light";
 };
 
-const logoMap = {
+const iconsMap = {
   light: {
-    whatsApp: whatsAppBlackLogo,
-    linkedin: inBlackLogo
-  },
-  dark: {
     whatsApp: whatsAppWhiteLogo,
     linkedin: inWhiteLogo
+  },
+  dark: {
+    whatsApp: whatsAppBlackLogo,
+    linkedin: inBlackLogo
   }
 };
 
-export const SocialLinks = ({ theme = "light" }: SocialLinksProps) => {
+export const SocialLinks = ({ style = "light" }: SocialLinksProps) => {
   const { setMagnify } = useCursorMagnify();
-  const { whatsApp, linkedin } = logoMap[theme];
+  const { whatsApp, linkedin } = iconsMap[style];
 
-  const links = [
+  const icons = [
     {
       icon: <img src={whatsApp} alt="whatsApp logo" />,
       url: "https://wa.me/447586474058",
@@ -41,7 +41,7 @@ export const SocialLinks = ({ theme = "light" }: SocialLinksProps) => {
     <section className={styles.socialSection} aria-label="Social links">
       <h3>Let's connect!</h3>
       <nav className={styles.socialLinks}>
-        {links.map(({ icon, url, label }) => (
+        {icons.map(({ icon, url, label }) => (
           <a
             key={url}
             href={url}
