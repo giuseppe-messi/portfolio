@@ -10,6 +10,7 @@ export const MobileNav = () => {
   return (
     <nav
       className={clsx(styles.nav, show && styles.open)}
+      id="toggle-menu"
       aria-label="Mobile navigation"
     >
       {show && (
@@ -25,7 +26,6 @@ export const MobileNav = () => {
               {...magnifyEvents}
               aria-expanded={show}
               aria-label="Open menu"
-              aria-controls="mobile-menu"
             >
               &times;
             </button>
@@ -53,7 +53,6 @@ export const MobileNav = () => {
           onClick={handleToggleNav}
           {...magnifyEvents}
           aria-label="Toggle menu"
-          aria-controls="toggle-menu"
         >
           <span></span>
           <span></span>

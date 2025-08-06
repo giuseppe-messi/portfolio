@@ -8,6 +8,10 @@
   margin-top: var(--space-lg);
 }
 
+.reposList li + li {
+  margin-top: 1rem;
+}
+
 .box > div {
   flex: 1;
 }

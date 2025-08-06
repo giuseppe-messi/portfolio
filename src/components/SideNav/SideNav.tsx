@@ -27,7 +27,6 @@ export const SideNav = () => {
               {...magnifyEvents}
               aria-expanded={show}
               aria-label="Open menu"
-              aria-controls="desktop-menu"
             >
               &times;
             </button>
@@ -55,7 +54,6 @@ export const SideNav = () => {
           onClick={handleToggleNav}
           {...magnifyEvents}
           aria-label="Toggle menu"
-          aria-controls="toggle-menu"
         >
           <span></span>
           <span></span>

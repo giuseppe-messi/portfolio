@@ -83,7 +83,7 @@
   }
 
   .blueWall {
-    clip-path: polygon(0 0, 80% 20%, 80% 57%, 0 75%);
+    clip-path: polygon(0 0, 12% 0%, 11% 92%, 0 100%);
   }
 }
 
@@ -99,8 +99,7 @@
   }
 
   .blueWall {
-    clip-path: polygon(0 0, 80% 20%, 80% 57%, 0 58%);
-    padding: 2em;
-    top: 8px;
+    clip-path: polygon(0 0, 10% 0%, 10% 82%, 0 85%);
+    padding: 2.5em;
   }
 }
