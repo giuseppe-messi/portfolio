@@ -22,7 +22,7 @@ const Home: React.FC = () => {
       <CustomCursor />
 
       <div className={styles.layout}>
-        <aside className={styles.leftSide}>
+        <aside aria-label="Site logo" className={styles.leftSide}>
           <LeftLayout />
         </aside>
 
@@ -39,7 +39,7 @@ const Home: React.FC = () => {
           <Footer />
         </main>
 
-        <aside className={styles.righttSide}>
+        <aside aria-label="Navigation" className={styles.righttSide}>
           <RightLayout />
         </aside>
       </div>

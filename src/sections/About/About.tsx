@@ -11,7 +11,7 @@ export const About = () => {
       className={clsx("section lightSection", styles.aboutSection)}
     >
       <div className="sectionBox">
-        <h2>
+        <h2 aria-label="About">
           <AnimatedText text="About" />
         </h2>
         <div className={styles.aboutBox}>

@@ -8,7 +8,7 @@ export const Contact = () => {
   return (
     <section id="contact" className={styles.contact}>
       <div className={styles.sayHiBox}>
-        <h2>
+        <h2 aria-label="Get in touch">
           <AnimatedText text="Get in touch !" />
         </h2>
       </div>

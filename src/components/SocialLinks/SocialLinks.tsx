@@ -37,6 +37,8 @@ export const SocialLinks = ({ style = "light" }: SocialLinksProps) => {
     }
   ];
 
+  if (!(whatsApp && linkedin)) return null;
+
   return (
     <section className={styles.socialSection} aria-label="Social links">
       <h3>Let's connect!</h3>

@@ -12,7 +12,7 @@ export const Works = () => {
       className={clsx("section darkSection", styles.worksSection)}
     >
       <div className="sectionBox">
-        <h2>
+        <h2 aria-label="Works">
           <AnimatedText text="Works" />
         </h2>
 
@@ -25,6 +25,9 @@ export const Works = () => {
                 href="https://github.com/giuseppe-messi/react-lab-mono"
                 onMouseEnter={() => setMagnify(true)}
                 onMouseLeave={() => setMagnify(false)}
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="GitHub page (opens in a new tab)"
               >
                 <strong>React Lab Mono</strong>
               </a>{" "}
@@ -33,19 +36,18 @@ export const Works = () => {
             </p>
             <br />
 
-            <ul>
+            <ul className={styles.reposList}>
               <li>
-                <strong>packages/ui</strong>: a production-ready set of fully
+                <strong>- packages/ui</strong>: a production-ready set of fully
                 typed, accessible React components, built with scalability,
                 theming, and testing in mind.
               </li>
-              <br />
               <li>
-                <strong>apps/</strong>: a set of focused, real-world demos
+                <strong>- apps/</strong>: a set of focused, real-world demos
                 showcasing practical patterns.
               </li>
-              <br />
             </ul>
+            <br />
 
             <p>
               The monorepo’s{" "}
